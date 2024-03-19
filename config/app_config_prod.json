@@ -1,0 +1,7 @@
+{
+    "api":{
+        "co": "https://api.protiendas.com.co/api"
+    },
+    "app_name": "app_protiendas_pro",
+    "environment": "release"
+}
