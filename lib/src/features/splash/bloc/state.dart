@@ -14,11 +14,11 @@ class InitialState extends State {
 }
 
 class LoadedState extends State {
-  const LoadedState(Model model) : super(model);
+  const LoadedState(super.model);
 }
 
 class ErrorState extends State {
-  const ErrorState(Model model) : super(model);
+  const ErrorState(super.model);
 }
 
 class UnLoggedState extends State {

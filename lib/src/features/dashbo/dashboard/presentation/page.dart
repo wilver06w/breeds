@@ -5,14 +5,14 @@ import 'package:flutter_modular/flutter_modular.dart'
     hide ModularWatchExtension;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
 import 'package:breeds/src/features/dashbo/home/presentation/page.dart' as home;
 import 'package:breeds/src/features/notifications/page.dart' as notifications;
 import 'package:breeds/src/features/favorites/page.dart' as favorites;
 import 'package:breeds/src/features/profile/page.dart' as profile;
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:breeds/src/features/dashbo/dashboard/presentation/bloc/bloc.dart';
 
 part 'package:breeds/src/features/dashbo/dashboard/presentation/_sections/body.dart';

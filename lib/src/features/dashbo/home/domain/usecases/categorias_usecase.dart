@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:breeds/src/core/network/failures.dart';
-import 'package:breeds/src/core/utils/usecases/usecase.dart';
+import 'package:network_breeds/app/network/failures.dart';
 import 'package:breeds/src/features/dashbo/home/domain/repositories/abstract_home_repository.dart';
-import 'package:breeds/src/shared/models/data_categoria.dart';
+import 'package:models_breeds/app/models/data_categoria.dart';
+import 'package:utils_breeds/utils/usecases/usecase.dart';
 
 class CategoriesUseCase extends UseCaseNoParams<DataCategoria> {
   final AbstractHomeRepository repository;

@@ -28,7 +28,7 @@ class Bottom extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           XigoTextHeading6(
-            ProTiendasUiValues.total,
+            BreedUiValues.total,
             color: ProTiendasUiColors.primaryColor,
             weight: FontWeight.w600,
           ),

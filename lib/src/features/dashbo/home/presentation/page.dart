@@ -5,21 +5,21 @@ import 'package:breeds_widget/app/widget/title_sections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:breeds/src/core/network/http_client.dart'
+import 'package:network_breeds/app/network/http_client.dart'
     hide ModularWatchExtension;
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
-import 'package:breeds/src/core/utils/loading.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
 import 'package:breeds/src/features/dashbo/home/domain/usecases/banlist_usecase.dart';
 import 'package:breeds/src/features/dashbo/home/domain/usecases/banner_usecase.dart';
 import 'package:breeds/src/features/dashbo/home/domain/usecases/categorias_usecase.dart';
 import 'package:breeds/src/features/dashbo/home/presentation/bloc/bloc.dart';
 import 'package:breeds/src/features/dashbo/repository.dart';
 import 'package:breeds/src/shared/widget/card_product_vertical.dart';
+import 'package:utils_breeds/utils/loading.dart';
 
 part 'package:breeds/src/features/dashbo/home/presentation/_sections/body.dart';
 

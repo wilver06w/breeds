@@ -1,7 +1,7 @@
-import 'package:breeds/src/core/network/http_client.dart';
+import 'package:network_breeds/app/network/http_client.dart';
 import 'package:breeds/src/features/dashbo/home/data/data_sources/remote/abstract_home_api.dart';
 import 'package:breeds/src/features/dashbo/home/domain/models/data_banner.dart';
-import 'package:breeds/src/shared/models/data_categoria.dart';
+import 'package:models_breeds/app/models/data_categoria.dart';
 
 class HomeImplApi extends AbstractHomeApi {
   HomeImplApi({

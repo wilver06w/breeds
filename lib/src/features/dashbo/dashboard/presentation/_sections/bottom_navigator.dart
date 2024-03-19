@@ -34,9 +34,9 @@ class BottomNavigator extends StatelessWidget {
                         ),
                       );
                 },
-                title: ProTiendasUiValues.start,
-                routeImage: ProTiendasUiValues.icHome,
-                routeIconSelected: ProTiendasUiValues.icHomeSelected,
+                title: BreedUiValues.start,
+                routeImage: BreedUiValues.icHome,
+                routeIconSelected: BreedUiValues.icHomeSelected,
               ),
               ItemDashboard(
                 position: 1,
@@ -47,9 +47,9 @@ class BottomNavigator extends StatelessWidget {
                         ),
                       );
                 },
-                title: ProTiendasUiValues.favorites,
-                routeImage: ProTiendasUiValues.icHeartNoSelectDashb,
-                routeIconSelected: ProTiendasUiValues.icFavoriteSelected,
+                title: BreedUiValues.favorites,
+                routeImage: BreedUiValues.icHeartNoSelectDashb,
+                routeIconSelected: BreedUiValues.icFavoriteSelected,
               ),
               ItemDashboard(
                 position: 2,
@@ -60,9 +60,9 @@ class BottomNavigator extends StatelessWidget {
                         ),
                       );
                 },
-                title: ProTiendasUiValues.notifications,
-                routeImage: ProTiendasUiValues.icBells,
-                routeIconSelected: ProTiendasUiValues.icNotificationSelected,
+                title: BreedUiValues.notifications,
+                routeImage: BreedUiValues.icBells,
+                routeIconSelected: BreedUiValues.icNotificationSelected,
               ),
               ItemDashboard(
                 position: 3,
@@ -73,9 +73,9 @@ class BottomNavigator extends StatelessWidget {
                         ),
                       );
                 },
-                title: ProTiendasUiValues.myProfile,
-                routeImage: ProTiendasUiValues.icMyProfile,
-                routeIconSelected: ProTiendasUiValues.icProfileSelected,
+                title: BreedUiValues.myProfile,
+                routeImage: BreedUiValues.icMyProfile,
+                routeIconSelected: BreedUiValues.icProfileSelected,
               ),
             ],
           ),

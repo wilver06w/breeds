@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:breeds/src/core/utils/config/client_config.dart';
-import 'package:breeds/src/core/utils/config/environment.dart';
-import 'package:breeds/src/core/network/http_client.dart';
-import 'package:breeds/src/core/utils/preferences.dart';
+import 'package:utils_breeds/utils/config/environment.dart';
+import 'package:utils_breeds/utils/config/client_config.dart';
+import 'package:network_breeds/app/network/http_client.dart';
+import 'package:utils_breeds/utils/preferences.dart';
 
 class App {
   static final instance = App._();

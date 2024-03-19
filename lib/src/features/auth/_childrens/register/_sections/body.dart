@@ -15,13 +15,13 @@ class Body extends StatelessWidget {
       children: [
         const Gap(ProTiendaSpacing.xl),
         XigoTextCustom(
-          ProTiendasUiValues.almostThere,
+          BreedUiValues.almostThere,
           color: ProTiendasUiColors.primaryColor,
           fontSize: 22,
         ),
         const Gap(ProTiendaSpacing.sm),
         XigoTextXl(
-          ProTiendasUiValues.completeDetailsCreateAccount,
+          BreedUiValues.completeDetailsCreateAccount,
           color: Colors.black,
         ),
         const Gap(ProTiendaSpacing.md),
@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
                           context.read<BlocRegister>().add(SendRegisterEvent());
                         } else {
                           showToast(
-                            ProTiendasUiValues.completeTheData,
+                            BreedUiValues.completeTheData,
                             backgroundColor: ProTiendasUiColors.rybBlue,
                             textStyle: const TextStyle(
                               color: Colors.white,
@@ -54,7 +54,7 @@ class Body extends StatelessWidget {
                         }
                       }
                     : null,
-                label: ProTiendasUiValues.createAccount,
+                label: BreedUiValues.createAccount,
               );
             },
           ),

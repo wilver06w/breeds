@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
             return Center(
               child: Stack(
                 children: [
-                  Image.asset(ProTiendasUiValues.icBackgroundTarjet),
+                  Image.asset(BreedUiValues.icBackgroundTarjet),
                   Positioned(
                     top: 40,
                     left: 20,
@@ -83,7 +83,7 @@ class Body extends StatelessWidget {
           value: true,
           activeColor: ProTiendasUiColors.primaryColor,
           title: XigoTextCaptionS(
-            ProTiendasUiValues.saveShippingAddress,
+            BreedUiValues.saveShippingAddress,
             color: ProTiendasUiColors.primaryColor,
             weight: FontWeight.w300,
           ),
@@ -95,7 +95,7 @@ class Body extends StatelessWidget {
             bool isFormValidate = state.model.isFormFilled;
 
             return XigoBtnPrimary(
-              label: ProTiendasUiValues.saveConfirm,
+              label: BreedUiValues.saveConfirm,
               backgroundColor: ProTiendasUiColors.secondaryColor,
               btnSize: XigoBtnSize.big,
               labelColor: ProTiendasUiColors.primaryColor,

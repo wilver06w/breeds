@@ -9,15 +9,15 @@ abstract class HomeState extends Equatable {
 }
 
 class InitialState extends HomeState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class LoadingBannerState extends HomeState {
-  const LoadingBannerState(Model model) : super(model);
+  const LoadingBannerState(super.model);
 }
 
 class LoadedBannerState extends HomeState {
-  const LoadedBannerState(Model model) : super(model);
+  const LoadedBannerState(super.model);
 }
 
 class ErrorBannerState extends HomeState {
@@ -30,7 +30,7 @@ class ErrorBannerState extends HomeState {
 }
 
 class LoadingListYuGiOhByArchetypeState extends HomeState {
-  const LoadingListYuGiOhByArchetypeState(Model model) : super(model);
+  const LoadingListYuGiOhByArchetypeState(super.model);
 }
 
 class LoadedDataCategoriasState extends HomeState {

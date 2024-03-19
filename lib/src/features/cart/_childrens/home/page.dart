@@ -4,11 +4,11 @@ import 'package:breeds_widget/app/widget/card_cart/card_product_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
 
 part 'package:breeds/src/features/cart/_childrens/home/_sections/body.dart';
 part 'package:breeds/src/features/cart/_childrens/home/_sections/bottom.dart';
@@ -27,7 +27,7 @@ class Page extends StatelessWidget {
           Modular.to.pop();
         },
         haveSearch: false,
-        title: ProTiendasUiValues.shoppingCart,
+        title: BreedUiValues.shoppingCart,
         havCart: false,
       ),
       bottomNavigationBar: const Bottom(),

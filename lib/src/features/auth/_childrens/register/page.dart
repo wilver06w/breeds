@@ -5,21 +5,21 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/input/input.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
-import 'package:breeds/src/core/utils/helpers/validations_inputs.dart';
-import 'package:breeds/src/core/utils/loading.dart';
-import 'package:breeds/src/core/utils/preferences.dart';
 import 'package:breeds/src/features/auth/_childrens/register/bloc/bloc.dart';
 import 'package:breeds/src/features/auth/_childrens/register/repository.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/config/client_config.dart';
-import 'package:breeds/src/core/network/http_client.dart'
+import 'package:network_breeds/app/network/http_client.dart'
     hide ModularWatchExtension;
+import 'package:utils_breeds/utils/config/client_config.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/input/input.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/validations_inputs.dart';
+import 'package:utils_breeds/utils/loading.dart';
+import 'package:utils_breeds/utils/preferences.dart';
 
 part 'package:breeds/src/features/auth/_childrens/register/_sections/body.dart';
 part 'package:breeds/src/features/auth/_childrens/register/_sections/footer.dart';
@@ -50,11 +50,11 @@ class Page extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
-                  ProTiendasUiValues.icPersonSvg,
+                  BreedUiValues.icPersonSvg,
                 ),
                 const Gap(ProTiendaSpacing.md),
                 XigoTextLarge(
-                  ProTiendasUiValues.createAccount,
+                  BreedUiValues.createAccount,
                   color: Colors.white,
                 ),
               ],

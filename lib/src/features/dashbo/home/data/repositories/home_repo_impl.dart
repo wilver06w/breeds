@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:breeds/src/core/network/exceptions.dart';
-import 'package:breeds/src/core/network/failures.dart';
+import 'package:network_breeds/app/network/exceptions.dart';
+import 'package:network_breeds/app/network/failures.dart';
 import 'package:breeds/src/features/dashbo/home/data/data_sources/remote/home_impl_api.dart';
 import 'package:breeds/src/features/dashbo/home/domain/repositories/abstract_home_repository.dart';
 import 'package:breeds/src/features/dashbo/home/domain/models/data_banner.dart';
-import 'package:breeds/src/shared/models/data_categoria.dart';
+import 'package:models_breeds/app/models/data_categoria.dart';
 
 class HomeRepositoryImpl extends AbstractHomeRepository {
   final HomeImplApi articlesApi;

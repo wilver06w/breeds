@@ -19,26 +19,17 @@ dependencies:
   flutter_bloc: ^8.1.3
   google_fonts: ^6.1.0
   intl: ^0.18.1
-  package_info_plus: ^5.0.1
-  shared_preferences: ^2.2.2
   equatable: ^2.0.5
   flutter_svg: ^2.0.9
   lottie: ^2.7.0
-  url_launcher: ^6.2.2
   oktoast: ^3.4.0
   percent_indicator: ^4.2.3
-  device_info_plus: ^9.1.1
   mocktail: ^1.0.2
   bloc_test: ^9.1.5
-  dio: ^5.4.0
   fullscreen_image_viewer: ^0.0.6
-  android_id: ^0.3.3
   dart_ipify: ^1.1.1
 
-  dio_smart_retry: ^6.0.0
-  dio_cache_interceptor: ^3.5.0
   meta: ^1.10.0
-  styled_text: ^8.1.0
   gap: ^3.0.1
   carousel_slider: ^4.2.1
   collection: ^1.18.0
@@ -48,23 +39,21 @@ dependencies:
     path: ../breeds_widget
   l10n_breeds:
     path: ../l10n_breeds
+  utils_breeds:
+    path: ../utils_breeds
+  models_breeds:
+    path: ../models_breeds
+  network_breeds:
+    path: ../network_breeds
+  package_info_plus: ^5.0.1
   # breeds_widget:
   #   git:
   #     url: git://github.com/your-username/my_private_package.git
-
-
-flutter_intl:
-  main_locale: es
-  enabled: true
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  # breeds_widget:
-  #   path: ../breeds_widget
-  # breeds_widget:
-  #     path: C:\project\flutter\breeds_widget\
 
 
 

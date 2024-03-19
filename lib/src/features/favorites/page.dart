@@ -1,8 +1,8 @@
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
 import 'package:breeds_widget/app/widget/card_favorite/card_product_favorite.dart';
 import 'package:flutter/material.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -13,7 +13,7 @@ class Page extends StatelessWidget {
       appBar: AppBarGlobal(
         onTapIcon: () {},
         haveSearch: false,
-        title: ProTiendasUiValues.favorites,
+        title: BreedUiValues.favorites,
       ),
       body: ListView(
         children: [

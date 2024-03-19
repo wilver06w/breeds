@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:breeds/src/features/splash/bloc/bloc.dart' as bloc;
 import 'package:breeds/src/features/splash/repository.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/config/client_config.dart';
-import 'package:breeds/src/core/network/http_client.dart';
-import 'package:breeds/src/core/network/token.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/preferences.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:lottie/lottie.dart';
+import 'package:utils_breeds/utils/config/client_config.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:network_breeds/app/network/http_client.dart';
+import 'package:network_breeds/app/network/token.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:utils_breeds/utils/constant/responsive.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/preferences.dart';
 
 part 'package:breeds/src/features/splash/listeners/core.dart';
 
@@ -38,8 +41,19 @@ class Page extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  ProTiendasUiValues.acacomproLogo,
+                // Image.asset(
+                //   BreedUiValues.acacomproLogo,
+                // ),
+                Lottie.asset(
+                  BreedUiValues.loadingAnimations,
+                  height: YuGiOhResponsive.heightSizeByContext(
+                    context,
+                    pixels: ProTiendaSpacing.xs,
+                  ),
+                  width: YuGiOhResponsive.withSizeByContext(
+                    context,
+                    pixels: ProTiendaSpacing.xs,
+                  ),
                 ),
               ],
             ),

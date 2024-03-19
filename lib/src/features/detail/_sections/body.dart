@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               XigoTextHeading4(
-                ProTiendasUiValues.amazon,
+                BreedUiValues.amazon,
                 color: Colors.black,
                 weight: FontWeight.w600,
               ),
@@ -48,7 +48,7 @@ class Body extends StatelessWidget {
               ),
               const Gap(ProTiendaSpacing.sm),
               XigoTextHeading6(
-                ProTiendasUiValues.sendFree,
+                BreedUiValues.sendFree,
                 color: ProTiendasUiColors.secondaryColor,
                 weight: FontWeight.w600,
               ),
@@ -102,7 +102,7 @@ class Body extends StatelessWidget {
                             image:
                                 'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
                             title:
-                                '${ProTiendasUiValues.balonFutbol} ${(index + 40)}',
+                                '${BreedUiValues.balonFutbol} ${(index + 40)}',
                             isFreeSend: true,
                           ),
                         );
@@ -118,13 +118,13 @@ class Body extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: ProTiendaSpacing.md),
           child: XigoBtnPrimary(
-            label: ProTiendasUiValues.buyNow,
+            label: BreedUiValues.buyNow,
             backgroundColor: ProTiendasUiColors.secondaryColor,
             btnSize: XigoBtnSize.big,
             labelColor: ProTiendasUiColors.primaryColor,
             onTap: () {
               showToast(
-                ProTiendasUiValues.completeTheData,
+                BreedUiValues.completeTheData,
                 backgroundColor: ProTiendasUiColors.rybBlue,
                 textStyle: const TextStyle(
                   color: Colors.white,
@@ -137,7 +137,7 @@ class Body extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: ProTiendaSpacing.md),
           child: XigoBtnOutline(
-            label: ProTiendasUiValues.addCart,
+            label: BreedUiValues.addCart,
             borderColor: ProTiendasUiColors.secondaryColor,
             labelColor: ProTiendasUiColors.secondaryColor,
             btnSize: XigoBtnSize.big,
@@ -150,7 +150,7 @@ class Body extends StatelessWidget {
           children: [
             const Gap(ProTiendaSpacing.sm),
             TitleSections(
-              title: ProTiendasUiValues.characteristics,
+              title: BreedUiValues.characteristics,
             ),
             const Gap(ProTiendaSpacing.xs),
             const XigoTextLarge(
@@ -159,7 +159,7 @@ class Body extends StatelessWidget {
             ),
             const Gap(ProTiendaSpacing.md),
             TitleSections(
-              title: ProTiendasUiValues.productSummary,
+              title: BreedUiValues.productSummary,
             ),
             const Gap(ProTiendaSpacing.xs),
             const XigoTextLarge(
@@ -168,7 +168,7 @@ class Body extends StatelessWidget {
             ),
             const Gap(ProTiendaSpacing.md),
             TitleSections(
-              title: ProTiendasUiValues.productDescription,
+              title: BreedUiValues.productDescription,
             ),
             const Gap(ProTiendaSpacing.xs),
             const XigoTextLarge(
@@ -199,7 +199,7 @@ class Body extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   XigoTextLarge(
-                    ProTiendasUiValues.mayInterest,
+                    BreedUiValues.mayInterest,
                     weight: FontWeight.bold,
                     color: ProTiendasUiColors.primaryColor,
                   ),
@@ -217,8 +217,7 @@ class Body extends StatelessWidget {
                         desct: '10% Dto',
                         image:
                             'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
-                        title:
-                            'Smart Watch paraAndroid/iOS ${((index + 100))}',
+                        title: 'Smart Watch paraAndroid/iOS ${((index + 100))}',
                         isFreeSend: true,
                         widthImage: 100,
                         id: (index + 100),
@@ -236,7 +235,7 @@ class Body extends StatelessWidget {
           children: [
             const Gap(ProTiendaSpacing.md),
             TitleSections(
-              title: ProTiendasUiValues.opinions,
+              title: BreedUiValues.opinions,
             ),
             const Gap(ProTiendaSpacing.xs),
             ...List.generate(
@@ -254,13 +253,13 @@ class Body extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(ProTiendaSpacing.md),
           child: XigoBtnPrimary(
-            label: ProTiendasUiValues.leaveOpinion,
+            label: BreedUiValues.leaveOpinion,
             backgroundColor: ProTiendasUiColors.secondaryColor,
             btnSize: XigoBtnSize.big,
             labelColor: ProTiendasUiColors.white,
             onTap: () {
               showToast(
-                ProTiendasUiValues.completeTheData,
+                BreedUiValues.completeTheData,
                 backgroundColor: ProTiendasUiColors.rybBlue,
                 textStyle: const TextStyle(
                   color: Colors.white,
@@ -320,7 +319,7 @@ class ItemQualification extends StatelessWidget {
             children: [
               imagen.isEmpty
                   ? Image.asset(
-                      ProTiendasUiValues.icOpinions,
+                      BreedUiValues.icOpinions,
                       height: 44,
                       width: 44,
                     )
@@ -355,11 +354,11 @@ class ItemQualification extends StatelessWidget {
                           ),
                           child: index > qualification - 1
                               ? SvgPicture.asset(
-                                  ProTiendasUiValues.starEmpty,
+                                  BreedUiValues.starEmpty,
                                   height: 13,
                                 )
                               : SvgPicture.asset(
-                                  ProTiendasUiValues.starFilled,
+                                  BreedUiValues.starFilled,
                                   height: 13,
                                 ),
                         ),

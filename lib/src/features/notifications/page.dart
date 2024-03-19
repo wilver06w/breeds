@@ -1,6 +1,6 @@
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
 import 'package:flutter/material.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -11,11 +11,11 @@ class Page extends StatelessWidget {
       appBar: AppBarGlobal(
         onTapIcon: () {},
         haveSearch: false,
-        title: ProTiendasUiValues.notifications,
+        title: BreedUiValues.notifications,
       ),
       body: Center(
         child: Text(
-          ProTiendasUiValues.notifications,
+          BreedUiValues.notifications,
         ),
       ),
     );

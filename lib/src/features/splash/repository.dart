@@ -1,5 +1,6 @@
-import 'package:breeds/src/shared/models/clien.dart';
-import 'package:breeds/src/core/network/http_client.dart';
+import 'package:models_breeds/app/models/clien.dart';
+
+import 'package:network_breeds/app/network/http_client.dart';
 
 class Repository {
   Repository({

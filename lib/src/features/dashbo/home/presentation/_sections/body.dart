@@ -70,7 +70,7 @@ class Body extends StatelessWidget {
             padding:
                 const EdgeInsets.symmetric(horizontal: ProTiendaSpacing.md),
             child: TitleSections(
-              title: ProTiendasUiValues.theNew,
+              title: BreedUiValues.theNew,
             ),
           ),
           BlocBuilder<BlocHome, HomeState>(
@@ -100,7 +100,7 @@ class Body extends StatelessWidget {
                             image:
                                 'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
                             title:
-                                '${ProTiendasUiValues.balonFutbol} ${(index + 30)}',
+                                '${BreedUiValues.balonFutbol} ${(index + 30)}',
                             isFreeSend: true,
                           ),
                         );
@@ -135,7 +135,7 @@ class Body extends StatelessWidget {
                   desct: '10% Dto',
                   image:
                       'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
-                  title: ProTiendasUiValues.balonFutbol,
+                  title: BreedUiValues.balonFutbol,
                   isFreeSend: true,
                 ),
               );
@@ -206,7 +206,7 @@ class CardImagenGrid extends StatelessWidget {
           if (isFreeSend) ...[
             const Gap(ProTiendaSpacing.sm),
             XigoTextSmall(
-              ProTiendasUiValues.sendFree,
+              BreedUiValues.sendFree,
               color: ProTiendasUiColors.secondaryColor,
             ),
           ]

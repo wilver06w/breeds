@@ -18,7 +18,7 @@ class FormLogin extends StatelessWidget {
         children: [
           XigoTextField(
             controller: null,
-            hintText: ProTiendasUiValues.email,
+            hintText: BreedUiValues.email,
             prefixIcon: const Icon(
               Icons.email_outlined,
               color: ProTiendasUiColors.silverFoil,
@@ -28,7 +28,7 @@ class FormLogin extends StatelessWidget {
             validator: (value) {
               return Validate.email(value as String)
                   ? null
-                  : ProTiendasUiValues.verifyEmail;
+                  : BreedUiValues.verifyEmail;
             },
             onChanged: (value) {
               context.read<BlocRegister>().add(
@@ -41,7 +41,7 @@ class FormLogin extends StatelessWidget {
           const Gap(ProTiendaSpacing.md),
           XigoTextField(
             controller: null,
-            hintText: ProTiendasUiValues.name,
+            hintText: BreedUiValues.name,
             prefixIcon: const Icon(
               Icons.person,
               color: ProTiendasUiColors.silverFoil,
@@ -50,7 +50,7 @@ class FormLogin extends StatelessWidget {
             filled: true,
             validator: (value) {
               if ((value ?? '').isEmpty) {
-                return '${ProTiendasUiValues.name} ${ProTiendasUiValues.onRequired}';
+                return '${BreedUiValues.name} ${BreedUiValues.onRequired}';
               }
               return null;
             },
@@ -69,14 +69,14 @@ class FormLogin extends StatelessWidget {
               Icons.phone_android,
               color: ProTiendasUiColors.silverFoil,
             ),
-            hintText: '# ${ProTiendasUiValues.cellPhone}',
+            hintText: '# ${BreedUiValues.cellPhone}',
             maxLength: app.country.digits,
             fillColor: Colors.white,
             filled: true,
             validator: (value) {
               if (value != null) {
                 if (value.length < app.country.digits!) {
-                  return ProTiendasUiValues.numberPhoneNoValid;
+                  return BreedUiValues.numberPhoneNoValid;
                 }
               }
               return null;
@@ -109,7 +109,7 @@ class FormLogin extends StatelessWidget {
                       offset: controllers.text.length,
                     ),
                   ),
-                hintText: ProTiendasUiValues.password,
+                hintText: BreedUiValues.password,
                 fillColor: Colors.white,
                 prefixIcon: const Icon(
                   Icons.password,
@@ -118,7 +118,7 @@ class FormLogin extends StatelessWidget {
                 filled: true,
                 validator: (value) {
                   if ((value ?? '').isEmpty) {
-                    return '${ProTiendasUiValues.password} ${ProTiendasUiValues.onRequired}';
+                    return '${BreedUiValues.password} ${BreedUiValues.onRequired}';
                   }
                   return null;
                 },

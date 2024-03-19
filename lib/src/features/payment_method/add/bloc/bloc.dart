@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 
 part 'event.dart';
 part 'state.dart';

@@ -5,19 +5,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/shared/models/data_citys.dart';
-import 'package:breeds/src/shared/models/data_departament.dart';
 import 'package:breeds/src/features/addresses/add/bloc/bloc.dart';
 import 'package:breeds/src/features/addresses/add/repository.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/config/client_config.dart';
-import 'package:breeds/src/core/network/http_client.dart'
+import 'package:network_breeds/app/network/http_client.dart'
     hide ModularWatchExtension;
-import 'package:breeds/src/core/utils/helpers/input/input.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:models_breeds/app/models/data_citys.dart';
+import 'package:models_breeds/app/models/data_departament.dart';
+import 'package:utils_breeds/utils/config/client_config.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/input/input.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -45,13 +45,13 @@ class Page extends StatelessWidget {
             },
             haveSearch: false,
             havCart: false,
-            title: ProTiendasUiValues.delivery,
+            title: BreedUiValues.delivery,
           ),
           body: ListView(
             padding: const EdgeInsets.all(ProTiendaSpacing.lg),
             children: [
               XigoTextHeading6(
-                ProTiendasUiValues.shippingAddress,
+                BreedUiValues.shippingAddress,
                 weight: FontWeight.w500,
               ),
               const Gap(ProTiendaSpacing.lg),
@@ -65,11 +65,11 @@ class Page extends StatelessWidget {
                         Row(
                           children: [
                             Image.asset(
-                              ProTiendasUiValues.icCheck,
+                              BreedUiValues.icCheck,
                             ),
                             const Gap(ProTiendaSpacing.sm),
                             XigoTextLarge(
-                              ProTiendasUiValues.yourData,
+                              BreedUiValues.yourData,
                               weight: FontWeight.bold,
                             ),
                           ],
@@ -77,11 +77,11 @@ class Page extends StatelessWidget {
                         Row(
                           children: [
                             SvgPicture.asset(
-                              ProTiendasUiValues.icEdit,
+                              BreedUiValues.icEdit,
                             ),
                             const Gap(ProTiendaSpacing.xs),
                             XigoTextSmall(
-                              ProTiendasUiValues.editData,
+                              BreedUiValues.editData,
                               color: ProTiendasUiColors.crayolaGreen,
                               weight: FontWeight.w500,
                             ),
@@ -120,11 +120,11 @@ class Page extends StatelessWidget {
                     ),
                     widget: DropdownButton<String>(
                       hint: XigoTextMedium(
-                        ProTiendasUiValues.type,
+                        BreedUiValues.type,
                         weight: FontWeight.w500,
                       ),
                       style: null,
-                      items: ProTiendasUiValues.addressList
+                      items: BreedUiValues.addressList
                           .map(
                             (item) => DropdownMenuItem(
                               value: item,
@@ -147,12 +147,12 @@ class Page extends StatelessWidget {
                           15,
                         ),
                       ),
-                      hintText: ProTiendasUiValues.number,
+                      hintText: BreedUiValues.number,
                       fillColor: Colors.white,
                       filled: true,
                       validator: (value) {
                         if ((value ?? '').isEmpty) {
-                          return '${ProTiendasUiValues.number} ${ProTiendasUiValues.onRequired}';
+                          return '${BreedUiValues.number} ${BreedUiValues.onRequired}';
                         }
                         return null;
                       },
@@ -172,7 +172,7 @@ class Page extends StatelessWidget {
                       isExpanded: true,
                       value: state.model.departamentSelected,
                       hint: XigoTextMedium(
-                        ProTiendasUiValues.department,
+                        BreedUiValues.department,
                         weight: FontWeight.w500,
                       ),
                       items: state.model.dataDepartament?.data
@@ -214,7 +214,7 @@ class Page extends StatelessWidget {
                           ? null
                           : state.model.citySelected,
                       hint: XigoTextMedium(
-                        ProTiendasUiValues.city,
+                        BreedUiValues.city,
                         weight: FontWeight.w500,
                       ),
                       items: state.model.dataCitys?.data
@@ -254,12 +254,12 @@ class Page extends StatelessWidget {
                     15,
                   ),
                 ),
-                hintText: ProTiendasUiValues.addressBuildingApartment,
+                hintText: BreedUiValues.addressBuildingApartment,
                 fillColor: Colors.white,
                 filled: true,
                 validator: (value) {
                   if ((value ?? '').isEmpty) {
-                    return '${ProTiendasUiValues.addressBuildingApartment} ${ProTiendasUiValues.onRequired}';
+                    return '${BreedUiValues.addressBuildingApartment} ${BreedUiValues.onRequired}';
                   }
                   return null;
                 },
@@ -273,12 +273,12 @@ class Page extends StatelessWidget {
                     15,
                   ),
                 ),
-                hintText: ProTiendasUiValues.neighborhood,
+                hintText: BreedUiValues.neighborhood,
                 fillColor: Colors.white,
                 filled: true,
                 validator: (value) {
                   if ((value ?? '').isEmpty) {
-                    return '${ProTiendasUiValues.neighborhood} ${ProTiendasUiValues.onRequired}';
+                    return '${BreedUiValues.neighborhood} ${BreedUiValues.onRequired}';
                   }
                   return null;
                 },
@@ -289,18 +289,18 @@ class Page extends StatelessWidget {
                 value: true,
                 activeColor: ProTiendasUiColors.primaryColor,
                 title: XigoTextCaptionS(
-                  ProTiendasUiValues.saveShippingAddress,
+                  BreedUiValues.saveShippingAddress,
                   color: ProTiendasUiColors.primaryColor,
                   weight: FontWeight.w300,
                 ),
                 onChanged: (value) {},
               ),
               XigoTextCaptionS(
-                ProTiendasUiValues.billingInformation,
+                BreedUiValues.billingInformation,
                 weight: FontWeight.w400,
               ),
               XigoTextSmall(
-                ProTiendasUiValues.whatInformationShouldAppearInvoice,
+                BreedUiValues.whatInformationShouldAppearInvoice,
                 weight: FontWeight.w300,
               ),
               const Gap(ProTiendaSpacing.md),
@@ -310,7 +310,7 @@ class Page extends StatelessWidget {
                   Expanded(
                     child: ContainerCircleColor(
                       widget: XigoTextCaptionS(
-                        ProTiendasUiValues.theSameShippingInformation,
+                        BreedUiValues.theSameShippingInformation,
                         weight: FontWeight.w300,
                         textAlign: TextAlign.center,
                       ),
@@ -320,7 +320,7 @@ class Page extends StatelessWidget {
                   Expanded(
                     child: ContainerCircleColor(
                       widget: XigoTextCaptionS(
-                        ProTiendasUiValues.theDataAnotherPersonCompany,
+                        BreedUiValues.theDataAnotherPersonCompany,
                         weight: FontWeight.w300,
                         textAlign: TextAlign.center,
                       ),
@@ -330,7 +330,7 @@ class Page extends StatelessWidget {
               ),
               const Gap(ProTiendaSpacing.md),
               XigoBtnPrimary(
-                label: ProTiendasUiValues.continu,
+                label: BreedUiValues.continu,
                 backgroundColor: ProTiendasUiColors.secondaryColor,
                 btnSize: XigoBtnSize.big,
                 labelColor: ProTiendasUiColors.primaryColor,

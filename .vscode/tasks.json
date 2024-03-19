@@ -1,0 +1,67 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            // build debug bundle from dev
+            // flutter build appbundle --debug --flavor dev --dart-define=environment=dev
+            "type": "flutter",
+            "command": "flutter",
+            "args": [
+                "build",
+                "appbundle",
+                "--debug",
+                "--flavor",
+                "dev",
+                "--dart-define=environment=dev"
+            ],
+            "group": "build",
+            "label": "Flutter: flutter build debug bundle for dev"
+        },
+        {
+            // build debug bundle like prod (carga los endpoints de prod)
+            // flutter build appbundle --debug --flavor prod --dart-define=environment=prod
+            "type": "flutter",
+            "command": "flutter",
+            "args": [
+                "build",
+                "appbundle",
+                "--debug",
+                "--flavor",
+                "prod",
+                "--dart-define=environment=prod"
+            ],
+            "group": "build",
+            "label": "Flutter: flutter build bundle debug like prod"
+        },
+        {
+            // build release bundle from prod
+            // flutter build appbundle --release --flavor prod --dart-define=environment=prod
+            "type": "flutter",
+            "command": "flutter",
+            "args": [
+                "build",
+                "appbundle",
+                "--flavor",
+                "prod",
+                "--dart-define=environment=prod"
+            ],
+            "group": "build",
+            "label": "Flutter: flutter build bundle for prod"
+        },
+        {
+            // build ios release bundle from prod
+            // flutter build ipa --flavor prod --dart-define=environment=prod
+            "type": "flutter",
+            "command": "flutter",
+            "args": [
+                "build",
+                "ipa",
+                "--flavor",
+                "prod",
+                "--dart-define=environment=prod"
+            ],
+            "group": "build",
+            "label": "Flutter: flutter build bundle ios for prod"
+        },
+	]
+}

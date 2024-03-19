@@ -6,7 +6,7 @@ import 'package:breeds/src/features/dashbo/home/domain/usecases/banlist_usecase.
 import 'package:breeds/src/features/dashbo/home/domain/usecases/banner_usecase.dart';
 import 'package:breeds/src/features/dashbo/home/domain/usecases/categorias_usecase.dart';
 import 'package:breeds/src/features/dashbo/repository.dart';
-import 'package:breeds/src/shared/models/data_categoria.dart';
+import 'package:models_breeds/app/models/data_categoria.dart';
 
 part 'event.dart';
 part 'state.dart';

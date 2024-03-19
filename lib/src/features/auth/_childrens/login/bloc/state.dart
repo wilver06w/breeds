@@ -9,23 +9,23 @@ abstract class LoginState extends Equatable {
 }
 
 class InitialState extends LoginState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class ChangedEmailState extends LoginState {
-  const ChangedEmailState(Model model) : super(model);
+  const ChangedEmailState(super.model);
 }
 
 class ChangedPasswordState extends LoginState {
-  const ChangedPasswordState(Model model) : super(model);
+  const ChangedPasswordState(super.model);
 }
 
 class LoadingLoginState extends LoginState {
-  const LoadingLoginState(Model model) : super(model);
+  const LoadingLoginState(super.model);
 }
 
 class LoadedLoginState extends LoginState {
-  const LoadedLoginState(Model model) : super(model);
+  const LoadedLoginState(super.model);
 }
 
 class ErrorLoginState extends LoginState {

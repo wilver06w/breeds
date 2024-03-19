@@ -7,13 +7,13 @@ import 'package:flutter_modular/flutter_modular.dart'
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:breeds/src/features/payment_method/add/bloc/bloc.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/helpers/formatter.dart';
-import 'package:breeds/src/core/utils/helpers/input/input.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/formatter.dart';
+import 'package:utils_breeds/utils/helpers/input/input.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 
 part 'package:breeds/src/features/payment_method/add/_sections/body.dart';
 part 'package:breeds/src/features/payment_method/add/_sections/form_data_tarjet.dart';
@@ -33,7 +33,7 @@ class Page extends StatelessWidget {
           },
           haveSearch: false,
           havCart: false,
-          title: ProTiendasUiValues.paymentMethod,
+          title: BreedUiValues.paymentMethod,
         ),
         body: const Body(),
       ),

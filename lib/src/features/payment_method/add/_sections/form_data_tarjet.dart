@@ -26,7 +26,7 @@ class FormDataTarjet extends StatelessWidget {
               Icons.credit_card,
               color: ProTiendasUiColors.silverFoil,
             ),
-            hintText: ProTiendasUiValues.cardNumber,
+            hintText: BreedUiValues.cardNumber,
             fillColor: Colors.white,
             filled: true,
             keyboardType: TextInputType.number,
@@ -38,7 +38,7 @@ class FormDataTarjet extends StatelessWidget {
             ],
             validator: (value) {
               if ((value ?? '').isEmpty) {
-                return '${ProTiendasUiValues.cardNumber} ${ProTiendasUiValues.onRequired}';
+                return '${BreedUiValues.cardNumber} ${BreedUiValues.onRequired}';
               }
               return null;
             },
@@ -58,12 +58,12 @@ class FormDataTarjet extends StatelessWidget {
                 15,
               ),
             ),
-            hintText: ProTiendasUiValues.cardHolderName,
+            hintText: BreedUiValues.cardHolderName,
             fillColor: Colors.white,
             filled: true,
             validator: (value) {
               if ((value ?? '').isEmpty) {
-                return '${ProTiendasUiValues.cardHolderName} ${ProTiendasUiValues.onRequired}';
+                return '${BreedUiValues.cardHolderName} ${BreedUiValues.onRequired}';
               }
               return null;
             },
@@ -86,7 +86,7 @@ class FormDataTarjet extends StatelessWidget {
                       15,
                     ),
                   ),
-                  hintText: ProTiendasUiValues.mmAA,
+                  hintText: BreedUiValues.mmAA,
                   fillColor: Colors.white,
                   filled: true,
                   keyboardType: TextInputType.number,
@@ -98,7 +98,7 @@ class FormDataTarjet extends StatelessWidget {
                   ],
                   validator: (value) {
                     if ((value ?? '').isEmpty) {
-                      return '${ProTiendasUiValues.mmAA} ${ProTiendasUiValues.onRequired}';
+                      return '${BreedUiValues.mmAA} ${BreedUiValues.onRequired}';
                     }
                     return null;
                   },
@@ -120,7 +120,7 @@ class FormDataTarjet extends StatelessWidget {
                       15,
                     ),
                   ),
-                  hintText: ProTiendasUiValues.cVV,
+                  hintText: BreedUiValues.cVV,
                   fillColor: Colors.white,
                   filled: true,
                   keyboardType: TextInputType.number,
@@ -132,7 +132,7 @@ class FormDataTarjet extends StatelessWidget {
                   ],
                   validator: (value) {
                     if ((value ?? '').isEmpty) {
-                      return '${ProTiendasUiValues.cVV} ${ProTiendasUiValues.onRequired}';
+                      return '${BreedUiValues.cVV} ${BreedUiValues.onRequired}';
                     }
                     return null;
                   },

@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
       children: [
         const Gap(ProTiendaSpacing.xxl),
         XigoTextXl(
-          ProTiendasUiValues.enterEmailUsername,
+          BreedUiValues.enterEmailUsername,
           color: Colors.black,
         ),
         const Gap(ProTiendaSpacing.xxl),
@@ -26,7 +26,7 @@ class Body extends StatelessWidget {
         const Gap(ProTiendaSpacing.sl),
         Center(
           child: XigoTextSmall(
-            ProTiendasUiValues.didForgetPassword,
+            BreedUiValues.didForgetPassword,
             color: ProTiendasUiColors.secondaryColor,
             weight: FontWeight.w500,
           ),
@@ -36,7 +36,7 @@ class Body extends StatelessWidget {
           builder: (context, state) {
             bool isFormValidate = state.model.isFormFilledLogin;
             return XigoBtnPrimary(
-              label: ProTiendasUiValues.continu,
+              label: BreedUiValues.continu,
               backgroundColor: ProTiendasUiColors.secondaryColor,
               btnSize: XigoBtnSize.big,
               labelColor: ProTiendasUiColors.primaryColor,
@@ -48,7 +48,7 @@ class Body extends StatelessWidget {
                         context.read<BlocLogin>().add(SendLoginEvent());
                       } else {
                         showToast(
-                          ProTiendasUiValues.completeTheData,
+                          BreedUiValues.completeTheData,
                           backgroundColor: ProTiendasUiColors.rybBlue,
                           textStyle: const TextStyle(
                             color: Colors.white,
@@ -63,7 +63,7 @@ class Body extends StatelessWidget {
         ),
         const Gap(ProTiendaSpacing.lg),
         XigoBtnOutline(
-          label: ProTiendasUiValues.createAccount,
+          label: BreedUiValues.createAccount,
           borderColor: ProTiendasUiColors.secondaryColor,
           labelColor: ProTiendasUiColors.secondaryColor,
           btnSize: XigoBtnSize.big,

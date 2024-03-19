@@ -1,4 +1,4 @@
-import 'package:breeds/src/core/network/http_client.dart';
+import 'package:network_breeds/app/network/http_client.dart';
 import 'package:breeds/src/features/dashbo/dashboard/presentation/page.dart'
     as dashboard;
 import 'package:breeds/src/features/dashbo/home/presentation/page.dart' as home;

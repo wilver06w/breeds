@@ -18,11 +18,11 @@ class BodyBottom extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             XigoText.small(
-              label: ProTiendasUiValues.textFooter,
+              label: BreedUiValues.textFooter,
               textStyle: GoogleFonts.lato(),
             ),
             XigoText.xSmall(
-              label: '${ProTiendasUiValues.version} ${app.version}',
+              label: '${BreedUiValues.version} ${app.version}',
             ),
           ],
         ),

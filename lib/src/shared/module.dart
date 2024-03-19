@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:breeds/src/core/network/http_client.dart';
+import 'package:network_breeds/app/network/http_client.dart';
 import 'package:breeds/src/features/addresses/module.dart';
 import 'package:breeds/src/features/auth/module.dart';
 import 'package:breeds/src/features/cart/module.dart';

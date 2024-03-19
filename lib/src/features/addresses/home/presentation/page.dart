@@ -1,14 +1,14 @@
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
 import 'package:breeds_widget/app/widget/container_circle_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -23,13 +23,13 @@ class Page extends StatelessWidget {
         },
         haveSearch: false,
         havCart: false,
-        title: ProTiendasUiValues.delivery,
+        title: BreedUiValues.delivery,
       ),
       body: ListView(
         padding: const EdgeInsets.all(ProTiendaSpacing.lg),
         children: [
           XigoTextHeading6(
-            ProTiendasUiValues.chooseDeliveryMethod,
+            BreedUiValues.chooseDeliveryMethod,
             weight: FontWeight.w500,
           ),
           const Gap(ProTiendaSpacing.lg),
@@ -43,17 +43,17 @@ class Page extends StatelessWidget {
                     Row(
                       children: [
                         SvgPicture.asset(
-                          ProTiendasUiValues.circleGrey,
+                          BreedUiValues.circleGrey,
                         ),
                         const Gap(ProTiendaSpacing.sm),
                         XigoTextLarge(
-                          ProTiendasUiValues.sendHome,
+                          BreedUiValues.sendHome,
                           weight: FontWeight.bold,
                         ),
                       ],
                     ),
                     XigoTextSmall(
-                      ProTiendasUiValues.sendFree,
+                      BreedUiValues.sendFree,
                       color: ProTiendasUiColors.crayolaGreen,
                       weight: FontWeight.w500,
                     ),
@@ -72,7 +72,7 @@ class Page extends StatelessWidget {
                     children: [
                       const Gap(ProTiendaSpacing.md),
                       XigoTextCaptionS(
-                        ProTiendasUiValues.addShippingAddress,
+                        BreedUiValues.addShippingAddress,
                         color: ProTiendasUiColors.crayolaGreen,
                         weight: FontWeight.w500,
                       ),
@@ -93,17 +93,17 @@ class Page extends StatelessWidget {
                     Row(
                       children: [
                         SvgPicture.asset(
-                          ProTiendasUiValues.circleGrey,
+                          BreedUiValues.circleGrey,
                         ),
                         const Gap(ProTiendaSpacing.sm),
                         XigoTextLarge(
-                          ProTiendasUiValues.pickUpDeliveryPoint,
+                          BreedUiValues.pickUpDeliveryPoint,
                           weight: FontWeight.bold,
                         ),
                       ],
                     ),
                     XigoTextSmall(
-                      ProTiendasUiValues.sendFree,
+                      BreedUiValues.sendFree,
                       color: ProTiendasUiColors.crayolaGreen,
                       weight: FontWeight.w500,
                     ),
@@ -124,11 +124,11 @@ class Page extends StatelessWidget {
                       Row(
                         children: [
                           SvgPicture.asset(
-                            ProTiendasUiValues.icUbicationDelivery,
+                            BreedUiValues.icUbicationDelivery,
                           ),
                           const Gap(ProTiendaSpacing.sm),
                           XigoTextCaptionS(
-                            ProTiendasUiValues.addressOffice,
+                            BreedUiValues.addressOffice,
                             color: ProTiendasUiColors.primaryColor,
                             weight: FontWeight.w300,
                           ),
@@ -138,11 +138,11 @@ class Page extends StatelessWidget {
                       Row(
                         children: [
                           SvgPicture.asset(
-                            ProTiendasUiValues.icTimeDelivery,
+                            BreedUiValues.icTimeDelivery,
                           ),
                           const Gap(ProTiendaSpacing.sm),
                           XigoTextCaptionS(
-                            ProTiendasUiValues.officeHours,
+                            BreedUiValues.officeHours,
                             color: ProTiendasUiColors.silverFoil,
                             weight: FontWeight.w300,
                           ),
@@ -150,7 +150,7 @@ class Page extends StatelessWidget {
                       ),
                       const Gap(ProTiendaSpacing.sm),
                       XigoTextCaptionS(
-                        ProTiendasUiValues.viewMapChooseAnotherCollectionPoint,
+                        BreedUiValues.viewMapChooseAnotherCollectionPoint,
                         color: ProTiendasUiColors.crayolaGreen,
                         weight: FontWeight.w500,
                       ),

@@ -17,7 +17,7 @@ class FormLogin extends StatelessWidget {
         children: [
           XigoTextField(
             controller: null,
-            hintText: ProTiendasUiValues.email,
+            hintText: BreedUiValues.email,
             prefixIcon: const Icon(
               Icons.email_outlined,
               color: ProTiendasUiColors.silverFoil,
@@ -27,7 +27,7 @@ class FormLogin extends StatelessWidget {
             validator: (value) {
               return Validate.email(value as String)
                   ? null
-                  : ProTiendasUiValues.verifyEmail;
+                  : BreedUiValues.verifyEmail;
             },
             onChanged: (value) {
               context.read<BlocLogin>().add(
@@ -51,7 +51,7 @@ class FormLogin extends StatelessWidget {
                       offset: controllers.text.length,
                     ),
                   ),
-                hintText: ProTiendasUiValues.password,
+                hintText: BreedUiValues.password,
                 prefixIcon: const Icon(
                   Icons.password,
                   color: ProTiendasUiColors.silverFoil,
@@ -60,7 +60,7 @@ class FormLogin extends StatelessWidget {
                 filled: true,
                 validator: (value) {
                   if ((value ?? '').isEmpty) {
-                    return '${ProTiendasUiValues.password} ${ProTiendasUiValues.onRequired}';
+                    return '${BreedUiValues.password} ${BreedUiValues.onRequired}';
                   }
                   return null;
                 },

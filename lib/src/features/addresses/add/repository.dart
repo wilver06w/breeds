@@ -1,6 +1,7 @@
-import 'package:breeds/src/shared/models/data_citys.dart';
-import 'package:breeds/src/shared/models/data_departament.dart';
-import 'package:breeds/src/core/network/http_client.dart';
+
+import 'package:network_breeds/app/network/http_client.dart';
+import 'package:models_breeds/app/models/data_citys.dart';
+import 'package:models_breeds/app/models/data_departament.dart';
 
 class Repository {
   Repository({

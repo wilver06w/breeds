@@ -9,15 +9,15 @@ abstract class DetailState extends Equatable {
 }
 
 class InitialState extends DetailState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class LoadingBannerState extends DetailState {
-  const LoadingBannerState(Model model) : super(model);
+  const LoadingBannerState(super.model);
 }
 
 class LoadedBannerState extends DetailState {
-  const LoadedBannerState(Model model) : super(model);
+  const LoadedBannerState(super.model);
 }
 
 class ErrorBannerState extends DetailState {
@@ -30,11 +30,11 @@ class ErrorBannerState extends DetailState {
 }
 
 class LoadingListYuGiOhByArchetypeState extends DetailState {
-  const LoadingListYuGiOhByArchetypeState(Model model) : super(model);
+  const LoadingListYuGiOhByArchetypeState(super.model);
 }
 
 class LoadedDataCategoriasState extends DetailState {
-  const LoadedDataCategoriasState(Model model) : super(model);
+  const LoadedDataCategoriasState(super.model);
 }
 
 class ErrorDataCategoriasState extends DetailState {
@@ -47,11 +47,11 @@ class ErrorDataCategoriasState extends DetailState {
 }
 
 class LoadingDataCategoriasState extends DetailState {
-  const LoadingDataCategoriasState(Model model) : super(model);
+  const LoadingDataCategoriasState(super.model);
 }
 
 class LoadedListYuGiOhBannedState extends DetailState {
-  const LoadedListYuGiOhBannedState(Model model) : super(model);
+  const LoadedListYuGiOhBannedState(super.model);
 }
 
 class ErrorListYuGiOhBannedState extends DetailState {
@@ -64,11 +64,11 @@ class ErrorListYuGiOhBannedState extends DetailState {
 }
 
 class LoadingDeleteByArchetypeState extends DetailState {
-  const LoadingDeleteByArchetypeState(Model model) : super(model);
+  const LoadingDeleteByArchetypeState(super.model);
 }
 
 class LoadedDeleteByArchetypeState extends DetailState {
-  const LoadedDeleteByArchetypeState(Model model) : super(model);
+  const LoadedDeleteByArchetypeState(super.model);
 }
 
 class ErrorDeleteByArchetypeState extends DetailState {

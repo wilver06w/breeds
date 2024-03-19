@@ -9,31 +9,31 @@ abstract class RegisterState extends Equatable {
 }
 
 class InitialState extends RegisterState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class ChangedEmailState extends RegisterState {
-  const ChangedEmailState(Model model) : super(model);
+  const ChangedEmailState(super.model);
 }
 
 class ChangedPasswordState extends RegisterState {
-  const ChangedPasswordState(Model model) : super(model);
+  const ChangedPasswordState(super.model);
 }
 
 class ChangedNameState extends RegisterState {
-  const ChangedNameState(Model model) : super(model);
+  const ChangedNameState(super.model);
 }
 
 class ChangedLastNameState extends RegisterState {
-  const ChangedLastNameState(Model model) : super(model);
+  const ChangedLastNameState(super.model);
 }
 
 class LoadingRegisterState extends RegisterState {
-  const LoadingRegisterState(Model model) : super(model);
+  const LoadingRegisterState(super.model);
 }
 
 class LoadedRegisterState extends RegisterState {
-  const LoadedRegisterState(Model model) : super(model);
+  const LoadedRegisterState(super.model);
 }
 
 class ErrorRegisterState extends RegisterState {

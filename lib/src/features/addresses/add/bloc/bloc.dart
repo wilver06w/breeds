@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:breeds/src/shared/models/data_citys.dart';
-import 'package:breeds/src/shared/models/data_departament.dart';
 import 'package:breeds/src/features/addresses/add/repository.dart';
+import 'package:models_breeds/app/models/data_citys.dart';
+import 'package:models_breeds/app/models/data_departament.dart';
 
 part 'event.dart';
 part 'state.dart';

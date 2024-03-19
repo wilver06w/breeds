@@ -28,26 +28,26 @@ class Bottom extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           ItemResumCart(
-            left: ProTiendasUiValues.productsUnits(
+            left: BreedUiValues.productsUnits(
               2,
             ),
             right: '\$ 4.290.000',
           ),
           const Gap(ProTiendaSpacing.sm),
           ItemResumCart(
-            left: ProTiendasUiValues.shipment,
+            left: BreedUiValues.shipment,
             right: '\$ 15.900',
           ),
           const Gap(ProTiendaSpacing.sm),
           ItemTotal(
-            left: ProTiendasUiValues.total,
+            left: BreedUiValues.total,
             right: '\$ 4.290.000',
           ),
           const Gap(ProTiendaSpacing.sl),
           SizedBox(
             width: double.infinity,
             child: XigoBtnPrimary(
-              label: ProTiendasUiValues.continueShopping,
+              label: BreedUiValues.continueShopping,
               backgroundColor: ProTiendasUiColors.secondaryColor,
               btnSize: XigoBtnSize.big,
               labelColor: ProTiendasUiColors.primaryColor,

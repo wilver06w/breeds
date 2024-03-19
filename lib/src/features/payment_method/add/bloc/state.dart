@@ -9,19 +9,19 @@ abstract class PaymentAddState extends Equatable {
 }
 
 class InitialState extends PaymentAddState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class ChangedNumberCardState extends PaymentAddState {
-  const ChangedNumberCardState(Model model) : super(model);
+  const ChangedNumberCardState(super.model);
 }
 
 class ChangedNameCardState extends PaymentAddState {
-  const ChangedNameCardState(Model model) : super(model);
+  const ChangedNameCardState(super.model);
 }
 
 class ChangedmMmAACardState extends PaymentAddState {
-  const ChangedmMmAACardState(Model model) : super(model);
+  const ChangedmMmAACardState(super.model);
 }
 
 class ErrorListYuGiOhBannedState extends PaymentAddState {
@@ -34,11 +34,11 @@ class ErrorListYuGiOhBannedState extends PaymentAddState {
 }
 
 class LoadingDeleteByArchetypeState extends PaymentAddState {
-  const LoadingDeleteByArchetypeState(Model model) : super(model);
+  const LoadingDeleteByArchetypeState(super.model);
 }
 
 class LoadedDeleteByArchetypeState extends PaymentAddState {
-  const LoadedDeleteByArchetypeState(Model model) : super(model);
+  const LoadedDeleteByArchetypeState(super.model);
 }
 
 class ErrorDeleteByArchetypeState extends PaymentAddState {
@@ -83,7 +83,7 @@ class Model extends Equatable {
       mmAA.isNotEmpty &&
       cVV.isNotEmpty;
 
-  String get imageIcSelected => ProTiendasUiValues.icVisa;
+  String get imageIcSelected => BreedUiValues.icVisa;
 
   @override
   List<Object?> get props {

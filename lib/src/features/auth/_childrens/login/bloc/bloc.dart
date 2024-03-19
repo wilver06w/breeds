@@ -1,16 +1,16 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:breeds/src/core/network/http_client.dart';
-import 'package:breeds/src/core/utils/config/client_config.dart';
+import 'package:network_breeds/app/network/http_client.dart';
 
 import 'package:breeds/src/features/auth/_childrens/login/repository.dart';
-import 'package:breeds/src/core/utils/preferences.dart';
 
-import 'package:breeds/src/features/splash/repository.dart' as repository_init;
-import 'package:breeds/src/shared/models/clien.dart';
-import 'package:breeds/src/shared/models/data_login.dart';
-import 'package:breeds/src/shared/models/token.dart';
+import 'package:breeds/src/features/splash/repository.dart' as repository_splash;
+import 'package:models_breeds/app/models/clien.dart';
+import 'package:models_breeds/app/models/data_login.dart';
+import 'package:models_breeds/app/models/token.dart';
+import 'package:utils_breeds/utils/config/client_config.dart';
+import 'package:utils_breeds/utils/preferences.dart';
 
 part 'event.dart';
 part 'state.dart';
@@ -29,7 +29,7 @@ class BlocLogin extends Bloc<LoginEvent, LoginState> {
   }
   final XigoHttpClient httpClient;
   final Repository repository;
-  final repository_init.Repository repositoryInit;
+  final repository_splash.Repository repositoryInit;
   final Preferences prefs;
   final AppConfig app;
 

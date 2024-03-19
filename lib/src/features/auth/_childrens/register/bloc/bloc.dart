@@ -1,13 +1,13 @@
 import 'package:bloc/bloc.dart';
+import 'package:network_breeds/app/network/http_client.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:breeds/src/shared/models/token.dart';
-import 'package:breeds/src/features/auth/_childrens/register/repository.dart';
-import 'package:breeds/src/core/utils/config/client_config.dart';
-import 'package:breeds/src/core/network/http_client.dart';
-import 'package:breeds/src/core/utils/preferences.dart';
+import 'package:models_breeds/app/models/data_login.dart';
+import 'package:models_breeds/app/models/token.dart';
+import 'package:utils_breeds/utils/config/client_config.dart';
 
-import '../../../../../shared/models/data_login.dart';
+import 'package:breeds/src/features/auth/_childrens/register/repository.dart';
+import 'package:utils_breeds/utils/preferences.dart';
 
 part 'event.dart';
 part 'state.dart';

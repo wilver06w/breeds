@@ -4,11 +4,11 @@ import 'package:flutter_modular/flutter_modular.dart'
     hide ModularWatchExtension;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
 
 class CardProductVertical extends StatelessWidget {
   const CardProductVertical({
@@ -63,8 +63,8 @@ class CardProductVertical extends StatelessWidget {
                     },
                     child: SvgPicture.asset(
                       isFavorite
-                          ? ProTiendasUiValues.iconHeartSvg
-                          : ProTiendasUiValues.icHeartNoSelected,
+                          ? BreedUiValues.iconHeartSvg
+                          : BreedUiValues.icHeartNoSelected,
                       height: 20,
                       width: 30,
                     ),
@@ -107,7 +107,7 @@ class CardProductVertical extends StatelessWidget {
               if (isFreeSend) ...[
                 const Gap(ProTiendaSpacing.sm),
                 XigoTextSmall(
-                  ProTiendasUiValues.sendFree,
+                  BreedUiValues.sendFree,
                   color: ProTiendasUiColors.secondaryColor,
                 ),
               ]

@@ -11,7 +11,7 @@ class Footer extends StatelessWidget {
       child: Column(
         children: [
           XigoTextSmall(
-            ProTiendasUiValues.loginWith,
+            BreedUiValues.loginWith,
             color: Colors.black,
           ),
           const Gap(ProTiendaSpacing.sl),
@@ -19,25 +19,25 @@ class Footer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ItemSigInRegister(
-                icRoute: ProTiendasUiValues.icGoogle,
+                icRoute: BreedUiValues.icGoogle,
               ),
               Gap(ProTiendaSpacing.sl),
               ItemSigInRegister(
-                icRoute: ProTiendasUiValues.icFacebook,
+                icRoute: BreedUiValues.icFacebook,
               ),
               Gap(ProTiendaSpacing.sl),
               ItemSigInRegister(
-                icRoute: ProTiendasUiValues.icIos,
+                icRoute: BreedUiValues.icIos,
               ),
               Gap(ProTiendaSpacing.sl),
               ItemSigInRegister(
-                icRoute: ProTiendasUiValues.icMicrosoft,
+                icRoute: BreedUiValues.icMicrosoft,
               ),
             ],
           ),
           const Gap(ProTiendaSpacing.xl),
           XigoTextSmall(
-            ProTiendasUiValues.iNeedHelpEnter,
+            BreedUiValues.iNeedHelpEnter,
             color: ProTiendasUiColors.secondaryColor,
             weight: FontWeight.w500,
           ),

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:breeds/src/core/utils/constant/colors.dart';
-import 'package:breeds/src/core/utils/constant/navigation.dart';
-import 'package:breeds/src/core/utils/constant/spacing.dart';
-import 'package:breeds/src/core/utils/helpers/text/text.dart';
-import 'package:breeds/src/core/utils/constant/protienda_ui.dart';
+import 'package:utils_breeds/utils/constant/colors.dart';
+import 'package:utils_breeds/utils/constant/navigation.dart';
+import 'package:utils_breeds/utils/constant/spacing.dart';
+import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:l10n_breeds/app/breeds_ui.dart';
 
 part 'package:breeds/src/features/payment_method/home/_sections/bottom.dart';
 part 'package:breeds/src/features/payment_method/home/_sections/item_payment.dart';
@@ -26,13 +26,13 @@ class Page extends StatelessWidget {
         },
         haveSearch: false,
         havCart: false,
-        title: ProTiendasUiValues.paymentMethod,
+        title: BreedUiValues.paymentMethod,
       ),
       body: ListView(
         padding: const EdgeInsets.all(ProTiendaSpacing.lg),
         children: [
           XigoTextHeading6(
-            ProTiendasUiValues.howWantPay,
+            BreedUiValues.howWantPay,
             weight: FontWeight.w500,
           ),
           const Gap(ProTiendaSpacing.xxl),
@@ -44,26 +44,26 @@ class Page extends StatelessWidget {
                   onTap: () {
                     ProTiendasRoute.navAddPayment();
                   },
-                  title: ProTiendasUiValues.newDebitCard,
-                  icon: ProTiendasUiValues.icTarjet,
+                  title: BreedUiValues.newDebitCard,
+                  icon: BreedUiValues.icTarjet,
                 ),
                 const Gap(ProTiendaSpacing.sl),
                 ItemPaymentMethod(
                   onTap: () {},
-                  title: ProTiendasUiValues.newDebitCard,
-                  icon: ProTiendasUiValues.icTarjet,
+                  title: BreedUiValues.newDebitCard,
+                  icon: BreedUiValues.icTarjet,
                 ),
                 const Gap(ProTiendaSpacing.sl),
                 ItemPaymentMethod(
                   onTap: () {},
-                  title: ProTiendasUiValues.bankTransferWithPse,
-                  icon: ProTiendasUiValues.icBank,
+                  title: BreedUiValues.bankTransferWithPse,
+                  icon: BreedUiValues.icBank,
                 ),
                 const Gap(ProTiendaSpacing.sl),
                 ItemPaymentMethod(
                   onTap: () {},
-                  title: ProTiendasUiValues.efecty,
-                  icon: ProTiendasUiValues.icEfecty,
+                  title: BreedUiValues.efecty,
+                  icon: BreedUiValues.icEfecty,
                 ),
               ],
             ),
