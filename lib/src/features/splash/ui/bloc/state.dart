@@ -21,10 +21,6 @@ class ErrorState extends StateSplash {
   const ErrorState(super.model);
 }
 
-class UnLoggedState extends StateSplash {
-  const UnLoggedState(super.model);
-}
-
 class Model extends Equatable {
   const Model();
   Model copyWith({

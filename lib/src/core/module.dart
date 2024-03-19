@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:breeds/src/core/app.dart';
 import 'package:network_breeds/app/network/http_client.dart';
-import 'package:breeds/src/features/dashbo/dashboard/presentation/bloc/bloc.dart';
-import 'package:breeds/src/features/dashbo/home/inject.dart';
+import 'package:breeds/src/features/home/inject.dart';
 import 'package:breeds/src/shared/module.dart';
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:utils_breeds/utils/config/client_config.dart';
@@ -27,7 +26,6 @@ class AppModule extends Module {
       ),
       Bind.lazySingleton((i) => BlocFavorite()),
       ...InjectHomeUseCase().binds,
-      Bind.lazySingleton((i) => BlocDashboard()),
       Bind((i) => GlobalKey<NavigatorState>()),
     ];
   }

@@ -1,4 +1,4 @@
-import 'package:breeds/src/features/dashbo/home/domain/models/data_banner.dart';
+import 'package:breeds/src/features/home/domain/models/breed.dart';
 import 'package:models_breeds/app/models/data_categoria.dart';
 import 'package:network_breeds/app/network/http_client.dart';
 

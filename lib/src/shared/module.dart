@@ -1,9 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:network_breeds/app/network/http_client.dart';
 import 'package:breeds/src/features/addresses/module.dart';
-import 'package:breeds/src/features/auth/module.dart';
 import 'package:breeds/src/features/cart/module.dart';
-import 'package:breeds/src/features/dashbo/module.dart';
+import 'package:breeds/src/features/home/module.dart';
 import 'package:breeds/src/features/detail/page.dart' as detail;
 import 'package:breeds/src/features/splash/ui/page.dart' as splash;
 import 'package:breeds/src/features/payment_method/module.dart';
@@ -27,8 +26,7 @@ class GlobalModule extends Module {
         ),
         transition: TransitionType.fadeIn,
       ),
-      ModuleRoute('/dashboard', module: DashboardModule()),
-      ModuleRoute('/auth', module: AuthModule()),
+      ModuleRoute('/home', module: HomeModule()),
       ModuleRoute('/address', module: AddressesModule()),
       ModuleRoute('/payment', module: PaymentMethodModule()),
       ModuleRoute('/cart', module: CartModule()),
