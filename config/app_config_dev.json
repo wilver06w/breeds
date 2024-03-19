@@ -1,7 +1,7 @@
 {
     "api":{
-        "co": "https://api.protiendas.com.co/api"
+        "co": "https://api.thecatapi.com"
     },
-    "app_name": "app_protiendas",
+    "app_name": "app_catbreeds",
     "environment": "develop"
 }

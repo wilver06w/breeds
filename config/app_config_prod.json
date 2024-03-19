@@ -1,7 +1,7 @@
 {
     "api":{
-        "co": "https://api.protiendas.com.co/api"
+        "co": "https://api.thecatapi.com"
     },
-    "app_name": "app_protiendas_pro",
+    "app_name": "app_catbreeds",
     "environment": "release"
 }

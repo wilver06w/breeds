@@ -1,28 +1,28 @@
 part of 'bloc.dart';
 
 @immutable
-abstract class State extends Equatable {
+abstract class StateSplash extends Equatable {
   final Model model;
-  const State(this.model);
+  const StateSplash(this.model);
 
   @override
   List<Object> get props => [model];
 }
 
-class InitialState extends State {
-  const InitialState(Model model) : super(model);
+class InitialState extends StateSplash {
+  const InitialState(super.model);
 }
 
-class LoadedState extends State {
+class LoadedState extends StateSplash {
   const LoadedState(super.model);
 }
 
-class ErrorState extends State {
+class ErrorState extends StateSplash {
   const ErrorState(super.model);
 }
 
-class UnLoggedState extends State {
-  const UnLoggedState(Model model) : super(model);
+class UnLoggedState extends StateSplash {
+  const UnLoggedState(super.model);
 }
 
 class Model extends Equatable {

@@ -5,7 +5,7 @@ import 'package:network_breeds/app/network/http_client.dart';
 
 import 'package:breeds/src/features/auth/_childrens/login/repository.dart';
 
-import 'package:breeds/src/features/splash/repository.dart' as repository_splash;
+import 'package:breeds/src/features/splash/ui/repository.dart' as repository_splash;
 import 'package:models_breeds/app/models/clien.dart';
 import 'package:models_breeds/app/models/data_login.dart';
 import 'package:models_breeds/app/models/token.dart';

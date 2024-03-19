@@ -34,7 +34,7 @@ class LoadingListYuGiOhByArchetypeState extends HomeState {
 }
 
 class LoadedDataCategoriasState extends HomeState {
-  const LoadedDataCategoriasState(Model model) : super(model);
+  const LoadedDataCategoriasState(super.model);
 }
 
 class ErrorDataCategoriasState extends HomeState {
@@ -47,11 +47,11 @@ class ErrorDataCategoriasState extends HomeState {
 }
 
 class LoadingDataCategoriasState extends HomeState {
-  const LoadingDataCategoriasState(Model model) : super(model);
+  const LoadingDataCategoriasState(super.model);
 }
 
 class LoadedListYuGiOhBannedState extends HomeState {
-  const LoadedListYuGiOhBannedState(Model model) : super(model);
+  const LoadedListYuGiOhBannedState(super.model);
 }
 
 class ErrorListYuGiOhBannedState extends HomeState {
@@ -68,7 +68,7 @@ class LoadingDeleteByArchetypeState extends HomeState {
 }
 
 class LoadedDeleteByArchetypeState extends HomeState {
-  const LoadedDeleteByArchetypeState(Model model) : super(model);
+  const LoadedDeleteByArchetypeState(super.model);
 }
 
 class ErrorDeleteByArchetypeState extends HomeState {

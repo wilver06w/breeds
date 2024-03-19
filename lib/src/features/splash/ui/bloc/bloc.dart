@@ -7,22 +7,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:models_breeds/app/models/clien.dart';
 import 'package:utils_breeds/utils/config/client_config.dart';
 import 'package:utils_breeds/utils/preferences.dart';
-import 'package:breeds/src/features/splash/repository.dart';
+import 'package:breeds/src/features/splash/ui/repository.dart';
 import 'package:network_breeds/app/network/http_client.dart';
 import 'package:network_breeds/app/network/token.dart';
 
 part 'event.dart';
 part 'state.dart';
 
-class Bloc extends bloc.Bloc<Event, State> {
-  Bloc({
+class BlocSplash extends bloc.Bloc<EventSplash, StateSplash> {
+  BlocSplash({
     required this.repository,
     required this.tokenRepository,
     required this.httpClient,
     required this.app,
     required this.prefs,
   }) : super(const InitialState(Model())) {
-    on<InitEvent>(_onLoadEvent);
+    on<FakeLoadingEvent>(_onFakeLoadingEvent);
   }
 
   final TokenRepository tokenRepository;
@@ -31,9 +31,9 @@ class Bloc extends bloc.Bloc<Event, State> {
   final AppConfig app;
   final Preferences prefs;
 
-  Future<void> _onLoadEvent(
-    InitEvent event,
-    Emitter<State> emit,
+  Future<void> _onFakeLoadingEvent(
+    FakeLoadingEvent event,
+    Emitter<StateSplash> emit,
   ) async {
     try {
       await isTokenExpired();

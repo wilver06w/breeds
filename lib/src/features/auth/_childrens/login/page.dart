@@ -4,26 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:network_breeds/app/network/http_client.dart'
     hide ModularWatchExtension;
 import 'package:breeds/src/features/auth/_childrens/login/bloc/bloc.dart';
 import 'package:breeds/src/features/auth/_childrens/login/repository.dart';
-import 'package:breeds/src/features/splash/repository.dart' as repository_init;
+import 'package:breeds/src/features/splash/ui/repository.dart' as repository_init;
 import 'package:utils_breeds/utils/config/client_config.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/navigation.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
 import 'package:utils_breeds/utils/helpers/input/input.dart';
+import 'package:breeds_widget/app/widget/body_footer.dart';
 import 'package:utils_breeds/utils/helpers/text/text.dart';
+
+
 import 'package:utils_breeds/utils/helpers/validations_inputs.dart';
 import 'package:utils_breeds/utils/loading.dart';
 import 'package:utils_breeds/utils/preferences.dart';
 
 part 'package:breeds/src/features/auth/_childrens/login/_sections/body.dart';
-part 'package:breeds/src/features/auth/_childrens/login/_sections/bottom.dart';
 part 'package:breeds/src/features/auth/_childrens/login/_sections/footer.dart';
 part 'package:breeds/src/features/auth/_childrens/login/_sections/form_login.dart';
 
@@ -77,7 +78,7 @@ class Page extends StatelessWidget {
             ),
           ),
           backgroundColor: Colors.white,
-          bottomNavigationBar: BodyBottom(app: app),
+          bottomNavigationBar: BodyFooter(app: app),
           body: const SafeArea(
             child: Body(),
           ),

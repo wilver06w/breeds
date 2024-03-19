@@ -5,7 +5,7 @@ import 'package:breeds/src/features/auth/module.dart';
 import 'package:breeds/src/features/cart/module.dart';
 import 'package:breeds/src/features/dashbo/module.dart';
 import 'package:breeds/src/features/detail/page.dart' as detail;
-import 'package:breeds/src/features/splash/page.dart' as splash;
+import 'package:breeds/src/features/splash/ui/page.dart' as splash;
 import 'package:breeds/src/features/payment_method/module.dart';
 
 class GlobalModule extends Module {

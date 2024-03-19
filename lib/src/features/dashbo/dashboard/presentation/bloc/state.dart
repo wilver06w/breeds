@@ -9,11 +9,11 @@ abstract class DashboardState extends Equatable {
 }
 
 class InitialState extends DashboardState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class ChangedPositionState extends DashboardState {
-  const ChangedPositionState(Model model) : super(model);
+  const ChangedPositionState(super.model);
 }
 
 class Model extends Equatable {
