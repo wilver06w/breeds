@@ -1,5 +1,6 @@
 import 'package:breeds/src/features/detail/domain/usecases/breed_usecase.dart';
 import 'package:breeds/src/features/detail/presentation/bloc/bloc.dart';
+import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
 import 'package:breeds_widget/app/widget/item_description.dart';
 import 'package:breeds_widget/app/widget/start_item.dart';
@@ -8,7 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:l10n_breeds/app/breeds_ui.dart';
-import 'package:network_breeds/app/network/http_client.dart';
+import 'package:network_breeds/app/network/http_client.dart'
+    hide ModularWatchExtension;
 import 'package:oktoast/oktoast.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/navigation.dart';
@@ -31,12 +33,19 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final getBreedUseCase = Modular.get<GetBreedUseCase>();
-    return BlocProvider<BlocDetail>(
-      create: (context) => BlocDetail(
-        getBreedUseCase: getBreedUseCase,
-      )..add(
-          LoadBreedDetailEvent(idBreeds: detailParams.id),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<BlocDetail>(
+          create: (context) => BlocDetail(
+            getBreedUseCase: getBreedUseCase,
+          )..add(
+              LoadBreedDetailEvent(idBreeds: detailParams.id),
+            ),
         ),
+        BlocProvider.value(
+          value: Modular.get<BlocFavorite>(),
+        ),
+      ],
       child: BlocListener<BlocDetail, DetailState>(
         listener: _listener,
         child: Scaffold(
@@ -44,6 +53,31 @@ class Page extends StatelessWidget {
           appBar: AppBarGlobal(
             title: detailParams.name,
             haveSearch: false,
+            havHeart: true,
+            havCart: false,
+            widgetHeart: BlocBuilder<BlocFavorite, FavoriteState>(
+              builder: (context, state) {
+                final isFavorite =
+                    state.model.favorites.contains(detailParams.breed);
+                return Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        if (detailParams.breed != null) {
+                          context.read<BlocFavorite>().add(
+                              OnChangeFavoriteEvent(id: detailParams.breed!));
+                        }
+                      },
+                      child: Icon(
+                        isFavorite ? Icons.favorite : Icons.favorite_border,
+                        color: ProTiendasUiColors.secondaryColor,
+                      ),
+                    ),
+                    const Gap(ProTiendaSpacing.md),
+                  ],
+                );
+              },
+            ),
             onTapIcon: () {
               Modular.to.pop();
             },

@@ -154,8 +154,7 @@ class Body extends StatelessWidget {
                         const Gap(ProTiendaSpacing.xl),
                         InkWell(
                           onTap: () {
-                            Functions.sharedBreedInfo(
-                                url: data?.wikipediaUrl ?? '');
+                            Functions.sharedBreedInfo(url: data?.wikipediaUrl ?? '');
                           },
                           child: const Icon(
                             Icons.share,

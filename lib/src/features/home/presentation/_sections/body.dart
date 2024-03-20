@@ -23,6 +23,7 @@ class Body extends StatelessWidget {
                 onFuntion: (value) {
                   ProTiendasRoute.navDetail(
                     detailParams: DetailParams(
+                      breed: value.breed,
                       id: value.id,
                       name: value.name,
                       image: value.image,
@@ -51,6 +52,7 @@ class Body extends StatelessWidget {
                           onTap: () {
                             ProTiendasRoute.navDetail(
                               detailParams: DetailParams(
+                                breed: item,
                                 id: item.id,
                                 name: item.name,
                                 image: item.referenceImageId ?? '',
@@ -118,6 +120,7 @@ class Body extends StatelessWidget {
                               onTap: () {
                                 ProTiendasRoute.navDetail(
                                   detailParams: DetailParams(
+                                    breed: item,
                                     id: item.id,
                                     name: item.name,
                                     image: item.referenceImageId ?? '',
@@ -167,6 +170,7 @@ class Body extends StatelessWidget {
                     onTap: () {
                       ProTiendasRoute.navDetail(
                         detailParams: DetailParams(
+                          breed: item,
                           id: item.id,
                           name: item.name,
                           image: item.referenceImageId ?? '',
