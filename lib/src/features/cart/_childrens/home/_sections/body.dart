@@ -16,6 +16,7 @@ class Body extends StatelessWidget {
                 ...List.generate(state.model.favorites.length, (index) {
                   final item = state.model.favorites[index];
                   return Padding(
+                    key: UniqueKey(),
                     padding: const EdgeInsets.symmetric(
                       horizontal: ProTiendaSpacing.lg,
                       vertical: ProTiendaSpacing.sm,
