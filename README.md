@@ -23,11 +23,11 @@ El proyecto está organizado de la siguiente manera:
             - y contiene un BreedUiValues:
                 Que recoge todas los llamados a estas key, y tambien a variables que se utilizan en la aplicación, por ejemplo la ruta de los assets.
    
-            ![Captura de pantalla 2024-03-20 175131](https://github.com/wilver06w/breeds/assets/39421707/b6b86a07-34c0-4201-8ac6-6dbe85b2774e)
+        ![Captura de pantalla 2024-03-20 175131](https://github.com/wilver06w/breeds/assets/39421707/b6b86a07-34c0-4201-8ac6-6dbe85b2774e)
         
       * Models: Aqui van los modelos, que son requeridos en la aplicacion.
 
-            ![Captura de pantalla 2024-03-20 175227](https://github.com/wilver06w/breeds/assets/39421707/67f2b032-22e7-4558-826d-02451fbaf9ac)
+        ![Captura de pantalla 2024-03-20 175227](https://github.com/wilver06w/breeds/assets/39421707/67f2b032-22e7-4558-826d-02451fbaf9ac)
 
         * Network: Aqui va la configuracion relacionada a los request, en este caso con DIO, lo uso como un singleton, entonces se instancia, y esa es la misma en toda la aplicacion.
           
