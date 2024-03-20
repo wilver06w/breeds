@@ -1,13 +1,11 @@
+import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:breeds_widget/app/widget/imagen_widget.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart'
     hide ModularWatchExtension;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-
-import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:models_breeds/app/models/breed.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';

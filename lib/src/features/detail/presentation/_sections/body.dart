@@ -152,9 +152,15 @@ class Body extends StatelessWidget {
                           color: ProTiendasUiColors.silverFoil,
                         ),
                         const Gap(ProTiendaSpacing.xl),
-                        const Icon(
-                          Icons.share,
-                          color: ProTiendasUiColors.secondaryColor,
+                        InkWell(
+                          onTap: () {
+                            Functions.sharedBreedInfo(
+                                url: data?.wikipediaUrl ?? '');
+                          },
+                          child: const Icon(
+                            Icons.share,
+                            color: ProTiendasUiColors.secondaryColor,
+                          ),
                         ),
                       ],
                     ),
