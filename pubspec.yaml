@@ -1,5 +1,5 @@
 name: breeds
-description: "A new Flutter project."
+description: "Project for technical test for PRAGMA"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
@@ -28,13 +28,13 @@ dependencies:
   bloc_test: ^9.1.5
   fullscreen_image_viewer: ^0.0.6
   dart_ipify: ^1.1.1
-
   meta: ^1.10.0
   gap: ^3.0.1
   carousel_slider: ^4.2.1
   collection: ^1.18.0
   dartz: ^0.10.1
   package_info_plus: ^5.0.1
+  patrol: ^3.6.0
 
   l10n_breeds:
     path: ../l10n_breeds
@@ -71,6 +71,8 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
+    sdk: flutter
+  integration_test:
     sdk: flutter
   flutter_lints: ^3.0.0
 flutter:

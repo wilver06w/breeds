@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:network_breeds/app/network/http_client.dart';
-import 'package:breeds/src/features/cart/module.dart';
+import 'package:breeds/src/features/favorite/module.dart';
 import 'package:breeds/src/features/home/module.dart';
 import 'package:breeds/src/features/detail/presentation/page.dart' as detail;
 import 'package:breeds/src/features/splash/ui/page.dart' as splash;

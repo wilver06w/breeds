@@ -13,13 +13,15 @@ class Body extends StatelessWidget {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(ProTiendaSpacing.sm),
+            padding: const EdgeInsets.all(BreedSpacing.sm),
             child: Center(
               child: CircleAvatar(
-                radius: YuGiOhResponsive.height(200),
+                radius: BreedResponsive.height(200),
                 backgroundImage: NetworkImage(
                   BreedUiValues.imageUrlConcatec(
-                    detailParams.image,
+                    detailParams.image.isNotEmpty
+                        ? detailParams.image
+                        : BreedUiValues.imageCat,
                   ),
                 ),
               ),
@@ -35,115 +37,115 @@ class Body extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Gap(ProTiendaSpacing.sm),
+                    const Gap(BreedSpacing.sm),
                     TitleSections(
                       title: BreedUiValues.characteristics,
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     XigoTextLarge(
                       data?.description ?? '',
                       weight: FontWeight.w300,
                     ),
-                    const Gap(ProTiendaSpacing.md),
+                    const Gap(BreedSpacing.md),
                     TitleSections(
                       title: BreedUiValues.weight,
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     ItemDescription(
                       title: BreedUiValues.imperial,
                       description: '${data?.weight.imperial}',
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     ItemDescription(
                       title: BreedUiValues.metric,
                       description: '${data?.weight.metric}',
                     ),
-                    const Gap(ProTiendaSpacing.md),
+                    const Gap(BreedSpacing.md),
                     TitleSections(
                       title: BreedUiValues.breedEspecifications,
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     ItemDescription(
                       title: BreedUiValues.temperament,
                       description: '${data?.temperament}',
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     ItemDescription(
                       title: BreedUiValues.origin,
                       description: '${data?.origin}',
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     ItemDescription(
                       title: BreedUiValues.countryCode,
                       description: '${data?.countryCode}',
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     ItemDescription(
                       title: BreedUiValues.lifeSpan,
                       description: '${data?.lifeSpan}',
                     ),
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     if ((data?.altNames ?? '').isNotEmpty) ...[
                       ItemDescription(
                         title: BreedUiValues.altNames,
                         description: '${data?.altNames}',
                       )
                     ],
-                    const Gap(ProTiendaSpacing.xs),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.adaptability,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.adaptability ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.adaptability ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.affectionLevel,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.affectionLevel ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.affectionLevel ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.childFriendly,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.childFriendly ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.childFriendly ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.dogFriendly,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.dogFriendly ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.dogFriendly ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.energyLevel,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.energyLevel ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.energyLevel ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.grooming,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.grooming ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.grooming ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.healthIssues,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.healthIssues ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.healthIssues ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.strangerFriendly,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.strangerFriendly ?? 0),
-                    const Gap(ProTiendaSpacing.xs),
+                    StarItem(qualification: data?.strangerFriendly ?? 0),
+                    const Gap(BreedSpacing.xs),
                     XigoTextSmall(
                       BreedUiValues.vocalisation,
                       color: ProTiendasUiColors.silverFoil,
                     ),
-                    StartItem(qualification: data?.vocalisation ?? 0),
-                    const Gap(ProTiendaSpacing.md),
+                    StarItem(qualification: data?.vocalisation ?? 0),
+                    const Gap(BreedSpacing.md),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -151,10 +153,11 @@ class Body extends StatelessWidget {
                           BreedUiValues.shareForFriend,
                           color: ProTiendasUiColors.silverFoil,
                         ),
-                        const Gap(ProTiendaSpacing.xl),
+                        const Gap(BreedSpacing.xl),
                         InkWell(
                           onTap: () {
-                            Functions.sharedBreedInfo(url: data?.wikipediaUrl ?? '');
+                            Functions.sharedBreedInfo(
+                                url: data?.wikipediaUrl ?? '');
                           },
                           child: const Icon(
                             Icons.share,
@@ -163,7 +166,7 @@ class Body extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Gap(ProTiendaSpacing.md),
+                    const Gap(BreedSpacing.md),
                   ],
                 ),
               ));
@@ -187,7 +190,7 @@ class BodySeparated extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        horizontal: ProTiendaSpacing.md,
+        horizontal: BreedSpacing.md,
       ),
       child: body,
     );

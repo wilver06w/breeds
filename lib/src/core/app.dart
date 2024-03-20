@@ -6,7 +6,6 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:utils_breeds/utils/config/environment.dart';
 import 'package:utils_breeds/utils/config/client_config.dart';
 import 'package:network_breeds/app/network/http_client.dart';
-import 'package:utils_breeds/utils/preferences.dart';
 
 class App {
   static final instance = App._();
@@ -30,11 +29,6 @@ class App {
 
     XigoHttpClient.env = environment;
     await XigoHttpClient().initAsyncData();
-
-    final prefs = Preferences();
-
-    await prefs.init();
-    prefs.isRefreshingToken = false;
 
     await _setPreferredOrientations();
 

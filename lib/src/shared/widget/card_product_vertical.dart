@@ -1,4 +1,4 @@
-import 'package:breeds_widget/app/widget/start_item.dart';
+import 'package:breeds_widget/app/widget/star_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart'
@@ -10,7 +10,7 @@ import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:models_breeds/app/models/breed.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
-import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/text/xigo_text.dart';
 
 class CardProductVertical extends StatelessWidget {
   const CardProductVertical({
@@ -36,7 +36,7 @@ class CardProductVertical extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(ProTiendaSpacing.sl),
+          padding: const EdgeInsets.all(BreedSpacing.sl),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -65,29 +65,31 @@ class CardProductVertical extends StatelessWidget {
                   radius: 50,
                   backgroundImage: NetworkImage(
                     BreedUiValues.imageUrlConcatec(
-                      breed.referenceImageId ?? '',
+                      (breed.referenceImageId ?? '').isNotEmpty
+                          ? breed.referenceImageId ?? ''
+                          : BreedUiValues.imageCat,
                     ),
                   ),
                 ),
               ),
-              const Gap(ProTiendaSpacing.sl),
+              const Gap(BreedSpacing.sl),
               XigoTextLarge(
                 breed.name,
                 color: ProTiendasUiColors.primaryColor,
                 weight: FontWeight.w600,
               ),
-              const Gap(ProTiendaSpacing.sm),
+              const Gap(BreedSpacing.sm),
               XigoTextSmall(
                 BreedUiValues.adaptability,
                 color: ProTiendasUiColors.silverFoil,
               ),
-              StartItem(qualification: breed.adaptability),
-              const Gap(ProTiendaSpacing.sm),
+              StarItem(qualification: breed.adaptability),
+              const Gap(BreedSpacing.sm),
               XigoTextSmall(
                 BreedUiValues.socialNeeds,
                 color: ProTiendasUiColors.silverFoil,
               ),
-              StartItem(qualification: breed.socialNeeds),
+              StarItem(qualification: breed.socialNeeds),
             ],
           ),
         ),

@@ -19,7 +19,7 @@ class SearchSeparated extends StatelessWidget {
           ),
         ),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: ProTiendaSpacing.md),
+      padding: const EdgeInsets.symmetric(horizontal: BreedSpacing.md),
       child: TextFormField(
         cursorHeight: 5,
         onChanged: (value) {

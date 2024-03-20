@@ -19,6 +19,7 @@ class BlocFavorite extends Bloc<FavoriteEvent, FavoriteState> {
     Emitter<FavoriteState> emit,
   ) async {
     final listFavorites = state.model.favorites;
+    emit(ChangingState(state.model));
     if (listFavorites.contains(event.id)) {
       add(OnDeleteEvent(id: event.id));
     } else {

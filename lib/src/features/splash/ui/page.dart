@@ -10,7 +10,7 @@ import 'package:utils_breeds/utils/config/client_config.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/navigation.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
-import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/text/xigo_text.dart';
 
 part 'package:breeds/src/features/splash/ui/listeners/core.dart';
 
@@ -22,7 +22,7 @@ class Page extends StatelessWidget {
     final app = Modular.get<AppConfig>();
     return Scaffold(
       backgroundColor: ProTiendasUiColors.backgroundColor,
-      bottomNavigationBar: BodyFooter(app: app),
+      bottomNavigationBar: BodyFooter(version: app.version),
       body: BlocProvider(
         create: (context) => BlocSplash()..add(FakeLoadingEvent()),
         child: BlocListener<BlocSplash, StateSplash>(
@@ -40,8 +40,8 @@ class Page extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: ProTiendaSpacing.md,
-                  ).copyWith(top: ProTiendaSpacing.xxl),
+                    horizontal: BreedSpacing.md,
+                  ).copyWith(top: BreedSpacing.xxl),
                   child: Lottie.asset(
                     BreedUiValues.catSplashAnimation,
                   ),

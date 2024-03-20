@@ -17,7 +17,7 @@ import 'package:utils_breeds/utils/config/client_config.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/navigation.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
-import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/text/xigo_text.dart';
 import 'package:utils_breeds/utils/loading.dart';
 
 part 'package:breeds/src/features/home/presentation/_sections/body.dart';
@@ -39,7 +39,7 @@ class Page extends StatelessWidget {
         listener: _listener,
         child: Scaffold(
           backgroundColor: Colors.white,
-          bottomNavigationBar: BodyFooter(app: app),
+          bottomNavigationBar: BodyFooter(version: app.version),
           appBar: AppBarGlobal(
             widgetSearch: Builder(builder: (context) {
               return const SearchSeparated();

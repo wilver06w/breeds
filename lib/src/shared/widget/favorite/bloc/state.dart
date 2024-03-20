@@ -12,6 +12,10 @@ class InitialState extends FavoriteState {
   const InitialState(super.model);
 }
 
+class ChangingState extends FavoriteState {
+  const ChangingState(super.model);
+}
+
 class AddedState extends FavoriteState {
   const AddedState(super.model);
 }

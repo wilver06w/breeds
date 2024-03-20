@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: XigoKeyboard.close,
+      onTap: BreedKeyboard.close,
       child: OKToast(
         child: MaterialApp.router(
           title: 'CatBreeds!',

@@ -10,7 +10,7 @@ import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:models_breeds/app/models/breed.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
-import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/text/xigo_text.dart';
 
 class CardProductHorizontal extends StatelessWidget {
   const CardProductHorizontal({
@@ -78,7 +78,7 @@ class CardProductHorizontal extends StatelessWidget {
                     width: widthImage,
                   ),
                 ),
-                const Gap(ProTiendaSpacing.sl),
+                const Gap(BreedSpacing.sl),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +88,7 @@ class CardProductHorizontal extends StatelessWidget {
                       color: ProTiendasUiColors.primaryColor,
                       weight: FontWeight.w600,
                     ),
-                    const Gap(ProTiendaSpacing.sm),
+                    const Gap(BreedSpacing.sm),
                   ],
                 ),
               ],

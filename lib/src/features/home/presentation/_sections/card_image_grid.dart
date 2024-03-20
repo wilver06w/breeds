@@ -13,7 +13,7 @@ class CardImagenGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: ProTiendaSpacing.md),
+      padding: const EdgeInsets.symmetric(horizontal: BreedSpacing.md),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,7 +26,7 @@ class CardImagenGrid extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(ProTiendaSpacing.sl),
+          const Gap(BreedSpacing.sl),
           XigoTextMedium(
             title,
             color: ProTiendasUiColors.primaryColor,

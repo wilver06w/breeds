@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:breeds/src/features/cart/_childrens/home/page.dart' as cart;
+import 'package:breeds/src/features/favorite/_childrens/home/page.dart' as favorite;
 
 class CartModule extends Module {
   @override
@@ -10,7 +10,7 @@ class CartModule extends Module {
     return [
       ChildRoute(
         Modular.initialRoute,
-        child: (_, args) => const cart.Page(),
+        child: (_, args) => const favorite.Page(),
         transition: TransitionType.fadeIn,
       ),
     ];

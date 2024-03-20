@@ -6,13 +6,11 @@ import 'package:breeds/src/features/home/inject.dart';
 import 'package:breeds/src/shared/module.dart';
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:utils_breeds/utils/config/client_config.dart';
-import 'package:utils_breeds/utils/preferences.dart';
 
 class AppModule extends Module {
   @override
   List<Bind> get binds {
     return [
-      Bind((i) => Preferences()),
       Bind<XigoHttpClient>(
         (i) => XigoHttpClient().getInstance(i<AppConfig>()),
       ),

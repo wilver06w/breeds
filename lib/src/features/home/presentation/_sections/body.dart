@@ -33,7 +33,7 @@ class Body extends StatelessWidget {
               );
             },
           ),
-          const Gap(ProTiendaSpacing.md),
+          const Gap(BreedSpacing.md),
           BlocBuilder<BlocHome, HomeState>(
             builder: (context, state) {
               if (state.model.getListArchetypeFilter.isEmpty) {
@@ -49,6 +49,7 @@ class Body extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final item = state.model.getListArchetypeFilter[index];
                         return InkWell(
+                          key: Key('breed/{$index}'),
                           onTap: () {
                             ProTiendasRoute.navDetail(
                               detailParams: DetailParams(
@@ -61,7 +62,7 @@ class Body extends StatelessWidget {
                           },
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                              horizontal: ProTiendaSpacing.sm,
+                              horizontal: BreedSpacing.sm,
                             ),
                             child: Column(
                               children: [
@@ -69,11 +70,13 @@ class Body extends StatelessWidget {
                                   radius: 35,
                                   backgroundImage: NetworkImage(
                                     BreedUiValues.imageUrlConcatec(
-                                      item.referenceImageId ?? '',
+                                      (item.referenceImageId ?? '').isNotEmpty
+                                          ? item.referenceImageId ?? ''
+                                          : BreedUiValues.imageCat,
                                     ),
                                   ),
                                 ),
-                                const Gap(ProTiendaSpacing.sl),
+                                const Gap(BreedSpacing.sl),
                                 XigoTextSmall(
                                   item.name,
                                   color: ProTiendasUiColors.primaryColor,
@@ -89,7 +92,7 @@ class Body extends StatelessWidget {
               );
             },
           ),
-          const Gap(ProTiendaSpacing.sl),
+          const Gap(BreedSpacing.sl),
           BlocBuilder<BlocHome, HomeState>(
             builder: (context, state) {
               if (state.model.getListArchetypeFilter.isEmpty) {
@@ -99,8 +102,8 @@ class Body extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: ProTiendaSpacing.md),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: BreedSpacing.md),
                     child: TitleSections(
                       title: BreedUiValues.theNew,
                     ),
@@ -129,10 +132,10 @@ class Body extends StatelessWidget {
                               },
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                  vertical: ProTiendaSpacing.xxs,
+                                  vertical: BreedSpacing.xxs,
                                 ),
                                 margin: const EdgeInsets.only(
-                                    left: ProTiendaSpacing.sl),
+                                    left: BreedSpacing.sl),
                                 child: CardProductVertical(
                                   breed: item,
                                 ),
@@ -147,7 +150,7 @@ class Body extends StatelessWidget {
               );
             },
           ),
-          const Gap(ProTiendaSpacing.lg),
+          const Gap(BreedSpacing.lg),
           BlocBuilder<BlocHome, HomeState>(
             builder: (context, state) {
               if (state.model.getListArchetypeFilter.isEmpty) {
@@ -179,7 +182,9 @@ class Body extends StatelessWidget {
                     },
                     child: CardImagenGrid(
                       image: BreedUiValues.imageUrlConcatec(
-                        item.referenceImageId ?? '',
+                        (item.referenceImageId ?? '').isNotEmpty
+                            ? item.referenceImageId ?? ''
+                            : BreedUiValues.imageCat,
                       ),
                       title: item.name,
                     ),

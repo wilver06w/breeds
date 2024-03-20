@@ -3,7 +3,7 @@ import 'package:breeds/src/features/detail/presentation/bloc/bloc.dart';
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
 import 'package:breeds_widget/app/widget/item_description.dart';
-import 'package:breeds_widget/app/widget/start_item.dart';
+import 'package:breeds_widget/app/widget/star_item.dart';
 import 'package:breeds_widget/app/widget/title_sections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,7 +17,7 @@ import 'package:utils_breeds/utils/constant/navigation.dart';
 import 'package:utils_breeds/utils/constant/responsive.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
 import 'package:utils_breeds/utils/functions.dart';
-import 'package:utils_breeds/utils/helpers/text/text.dart';
+import 'package:utils_breeds/utils/helpers/text/xigo_text.dart';
 import 'package:utils_breeds/utils/loading.dart';
 
 part 'package:breeds/src/features/detail/presentation/_sections/body.dart';
@@ -73,7 +73,7 @@ class Page extends StatelessWidget {
                         color: ProTiendasUiColors.secondaryColor,
                       ),
                     ),
-                    const Gap(ProTiendaSpacing.md),
+                    const Gap(BreedSpacing.md),
                   ],
                 );
               },
