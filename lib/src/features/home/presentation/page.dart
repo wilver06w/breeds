@@ -59,7 +59,7 @@ class Page extends StatelessWidget {
 
 Future<void> _listener(BuildContext context, HomeState state) async {
   if (state is LoadingListBreedState) {
-    YuGiOhLoading.show(context);
+    BreedLoading.show(context);
   } else if (state is ErrorListBreedState) {
     Navigator.pop(context);
     showToast(
