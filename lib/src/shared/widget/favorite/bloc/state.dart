@@ -9,11 +9,11 @@ abstract class FavoriteState extends Equatable {
 }
 
 class InitialState extends FavoriteState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class AddedState extends FavoriteState {
-  const AddedState(Model model) : super(model);
+  const AddedState(super.model);
 }
 
 class DeletedState extends FavoriteState {
@@ -29,10 +29,10 @@ class Model extends Equatable {
     this.favorites = const [],
   });
 
-  final List<int> favorites;
+  final List<Breed> favorites;
 
   Model copyWith({
-    List<int>? favorites,
+    List<Breed>? favorites,
   }) {
     return Model(
       favorites: favorites ?? this.favorites,

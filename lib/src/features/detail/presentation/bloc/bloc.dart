@@ -1,42 +1,44 @@
 import 'package:bloc/bloc.dart';
+import 'package:breeds/src/features/detail/domain/models/breed_detail.dart';
+import 'package:breeds/src/features/detail/domain/usecases/breed_usecase.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:breeds/src/features/home/domain/models/breed.dart';
-import 'package:models_breeds/app/models/data_categoria.dart';
-import 'package:models_breeds/app/models/list_yugioh.dart';
-import 'package:utils_breeds/utils/functions.dart';
 
 part 'event.dart';
 part 'state.dart';
 
 class BlocDetail extends Bloc<DetailEvent, DetailState> {
-  BlocDetail() : super(const InitialState(Model())) {
-    on<LoadDataCategoriasEvent>(_onLoadDataCategoriasEvent);
+  BlocDetail({
+    required this.getBreedUseCase,
+  }) : super(const InitialState(Model())) {
+    on<LoadBreedDetailEvent>(_onLoadBreedDetailEvent);
   }
 
-  Future<void> _onLoadDataCategoriasEvent(
-    LoadDataCategoriasEvent event,
+  final GetBreedUseCase getBreedUseCase;
+
+  Future<void> _onLoadBreedDetailEvent(
+    LoadBreedDetailEvent event,
     Emitter<DetailState> emit,
   ) async {
-    try {
-      emit(LoadingDataCategoriasState(state.model));
+    emit(LoadingBreedState(state.model));
 
-      // final dataCategoria = await repository.getCategorias();
+    final breedDetail = await getBreedUseCase.call(event.idBreeds);
 
+    breedDetail.fold((l) {
       emit(
-        LoadedDataCategoriasState(
+        ErrorBreedState(
+          model: state.model,
+          message: l.errorMessage,
+        ),
+      );
+    }, (r) {
+      emit(
+        LoadedBreedState(
           state.model.copyWith(
-            // dataCategoria: dataCategoria,
+            breedDetail: r,
           ),
         ),
       );
-    } catch (error) {
-      emit(
-        ErrorDataCategoriasState(
-          model: state.model,
-          message: error.toString(),
-        ),
-      );
-    }
+    });
   }
 }

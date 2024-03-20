@@ -1,7 +1,9 @@
+import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
 import 'package:breeds_widget/app/widget/button/btn.dart';
 import 'package:breeds_widget/app/widget/card_cart/card_product_cart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 import 'package:utils_breeds/utils/helpers/text/text.dart';
@@ -20,18 +22,21 @@ class Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ProTiendasUiColors.white,
-      appBar: AppBarGlobal(
-        onTapIcon: () {
-          Modular.to.pop();
-        },
-        haveSearch: false,
-        title: BreedUiValues.shoppingCart,
-        havCart: false,
+    return BlocProvider.value(
+      value: Modular.get<BlocFavorite>(),
+      child: Scaffold(
+        backgroundColor: ProTiendasUiColors.white,
+        appBar: AppBarGlobal(
+          onTapIcon: () {
+            Modular.to.pop();
+          },
+          haveSearch: false,
+          title: BreedUiValues.favorites,
+          havCart: false,
+        ),
+        bottomNavigationBar: const Bottom(),
+        body: const Body(),
       ),
-      bottomNavigationBar: const Bottom(),
-      body: const Body(),
     );
   }
 }

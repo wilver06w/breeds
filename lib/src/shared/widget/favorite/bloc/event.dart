@@ -12,7 +12,7 @@ class OnChangeFavoriteEvent extends FavoriteEvent {
     required this.id,
   });
 
-  final int id;
+  final Breed id;
 }
 
 class OnAddEvent extends FavoriteEvent {
@@ -20,7 +20,7 @@ class OnAddEvent extends FavoriteEvent {
     required this.id,
   });
 
-  final int id;
+  final Breed id;
 }
 
 class OnDeleteEvent extends FavoriteEvent {
@@ -28,5 +28,5 @@ class OnDeleteEvent extends FavoriteEvent {
     required this.id,
   });
 
-  final int id;
+  final Breed id;
 }

@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:models_breeds/app/models/breed.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
 import 'package:utils_breeds/utils/helpers/text/text.dart';
@@ -14,18 +15,9 @@ import 'package:utils_breeds/utils/helpers/text/text.dart';
 class CardProductVertical extends StatelessWidget {
   const CardProductVertical({
     super.key,
-    required this.image,
-    required this.title,
-    required this.adaptability,
-    required this.socialNeeds,
-    required this.id,
+    required this.breed,
   });
-
-  final String image;
-  final String title;
-  final int adaptability;
-  final int socialNeeds;
-  final int id;
+  final Breed breed;
 
   @override
   Widget build(BuildContext context) {
@@ -50,13 +42,13 @@ class CardProductVertical extends StatelessWidget {
             children: [
               BlocBuilder<BlocFavorite, FavoriteState>(
                 builder: (context, state) {
-                  final isFavorite = state.model.favorites.contains(id);
+                  final isFavorite = state.model.favorites.contains(breed);
 
                   return InkWell(
                     onTap: () {
                       context
                           .read<BlocFavorite>()
-                          .add(OnChangeFavoriteEvent(id: id));
+                          .add(OnChangeFavoriteEvent(id: breed));
                     },
                     child: SvgPicture.asset(
                       isFavorite
@@ -72,13 +64,15 @@ class CardProductVertical extends StatelessWidget {
                 child: CircleAvatar(
                   radius: 50,
                   backgroundImage: NetworkImage(
-                    image,
+                    BreedUiValues.imageUrlConcatec(
+                      breed.referenceImageId ?? '',
+                    ),
                   ),
                 ),
               ),
               const Gap(ProTiendaSpacing.sl),
               XigoTextLarge(
-                title,
+                breed.name,
                 color: ProTiendasUiColors.primaryColor,
                 weight: FontWeight.w600,
               ),
@@ -87,13 +81,13 @@ class CardProductVertical extends StatelessWidget {
                 BreedUiValues.adaptability,
                 color: ProTiendasUiColors.silverFoil,
               ),
-              StartItem(qualification: adaptability),
+              StartItem(qualification: breed.adaptability),
               const Gap(ProTiendaSpacing.sm),
               XigoTextSmall(
                 BreedUiValues.socialNeeds,
                 color: ProTiendasUiColors.silverFoil,
               ),
-              StartItem(qualification: socialNeeds),
+              StartItem(qualification: breed.socialNeeds),
             ],
           ),
         ),

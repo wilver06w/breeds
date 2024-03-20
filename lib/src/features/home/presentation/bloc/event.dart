@@ -8,3 +8,9 @@ abstract class HomeEvent extends Equatable {
 }
 
 class LoadListBreedEvent extends HomeEvent {}
+
+class SearchBreedEvent extends HomeEvent {
+  const SearchBreedEvent({required this.search});
+
+  final String search;
+}

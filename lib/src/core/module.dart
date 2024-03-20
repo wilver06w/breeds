@@ -1,3 +1,4 @@
+import 'package:breeds/src/features/detail/inject.dart';
 import 'package:flutter/material.dart';
 import 'package:breeds/src/core/app.dart';
 import 'package:network_breeds/app/network/http_client.dart';
@@ -26,6 +27,7 @@ class AppModule extends Module {
       ),
       Bind.lazySingleton((i) => BlocFavorite()),
       ...InjectHomeUseCase().binds,
+      ...InjectDetailUseCase().binds,
       Bind((i) => GlobalKey<NavigatorState>()),
     ];
   }

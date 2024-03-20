@@ -12,67 +12,24 @@ class InitialState extends HomeState {
   const InitialState(super.model);
 }
 
-class LoadingBannerState extends HomeState {
-  const LoadingBannerState(super.model);
+class LoadingListBreedState extends HomeState {
+  const LoadingListBreedState(super.model);
 }
 
-class LoadedBannerState extends HomeState {
-  const LoadedBannerState(super.model);
+class LoadingSearchState extends HomeState {
+  const LoadingSearchState(super.model);
 }
 
-class ErrorBannerState extends HomeState {
-  const ErrorBannerState({
-    required Model model,
-    this.message = '',
-  }) : super(model);
-
-  final String message;
+class SearchBreedState extends HomeState {
+  const SearchBreedState(super.model);
 }
 
-class LoadingListYuGiOhByArchetypeState extends HomeState {
-  const LoadingListYuGiOhByArchetypeState(super.model);
+class LoadedListBreedState extends HomeState {
+  const LoadedListBreedState(super.model);
 }
 
-class LoadedDataCategoriasState extends HomeState {
-  const LoadedDataCategoriasState(super.model);
-}
-
-class ErrorDataCategoriasState extends HomeState {
-  const ErrorDataCategoriasState({
-    required Model model,
-    this.message = '',
-  }) : super(model);
-
-  final String message;
-}
-
-class LoadingDataCategoriasState extends HomeState {
-  const LoadingDataCategoriasState(super.model);
-}
-
-class LoadedListYuGiOhBannedState extends HomeState {
-  const LoadedListYuGiOhBannedState(super.model);
-}
-
-class ErrorListYuGiOhBannedState extends HomeState {
-  const ErrorListYuGiOhBannedState({
-    required Model model,
-    this.message = '',
-  }) : super(model);
-
-  final String message;
-}
-
-class LoadingDeleteByArchetypeState extends HomeState {
-  const LoadingDeleteByArchetypeState(Model model) : super(model);
-}
-
-class LoadedDeleteByArchetypeState extends HomeState {
-  const LoadedDeleteByArchetypeState(super.model);
-}
-
-class ErrorDeleteByArchetypeState extends HomeState {
-  const ErrorDeleteByArchetypeState({
+class ErrorListBreedState extends HomeState {
+  const ErrorListBreedState({
     required Model model,
     this.message = '',
   }) : super(model);
@@ -83,32 +40,32 @@ class ErrorDeleteByArchetypeState extends HomeState {
 class Model extends Equatable {
   const Model({
     this.listBreed = const [],
-    this.dataCategoria,
-    this.banList,
+    this.breedSearch = '',
   });
 
   final List<Breed> listBreed;
-  final DataCategoria? dataCategoria;
-  final List<int>? banList;
+  final String breedSearch;
 
   Model copyWith({
     List<Breed>? listBreed,
-    DataCategoria? dataCategoria,
-    List<int>? banList,
+    String? breedSearch,
   }) {
     return Model(
       listBreed: listBreed ?? this.listBreed,
-      dataCategoria: dataCategoria ?? this.dataCategoria,
-      banList: banList ?? this.banList,
+      breedSearch: breedSearch ?? this.breedSearch,
     );
   }
 
+  List<Breed> get getListArchetypeFilter => breedSearch.isEmpty
+      ? listBreed
+      : Functions.getListFilter(
+          search: breedSearch,
+          listBreed: listBreed,
+        );
   @override
   List<Object?> get props {
     return [
       listBreed,
-      dataCategoria,
-      banList,
     ];
   }
 }

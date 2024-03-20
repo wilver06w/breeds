@@ -11,7 +11,6 @@ import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/navigation.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
 import 'package:utils_breeds/utils/helpers/text/text.dart';
-import 'package:utils_breeds/utils/toast.dart';
 
 part 'package:breeds/src/features/splash/ui/listeners/core.dart';
 

@@ -1,10 +1,9 @@
-import 'package:breeds/src/features/home/domain/models/breed.dart';
-import 'package:dartz/dartz.dart';
-import 'package:network_breeds/app/network/exceptions.dart';
-import 'package:network_breeds/app/network/failures.dart';
 import 'package:breeds/src/features/home/data/data_sources/remote/home_impl_api.dart';
 import 'package:breeds/src/features/home/domain/repositories/abstract_home_repository.dart';
-import 'package:models_breeds/app/models/data_categoria.dart';
+import 'package:dartz/dartz.dart';
+import 'package:models_breeds/app/models/breed.dart';
+import 'package:network_breeds/app/network/exceptions.dart';
+import 'package:network_breeds/app/network/failures.dart';
 
 class HomeRepositoryImpl extends AbstractHomeRepository {
   final HomeImplApi articlesApi;

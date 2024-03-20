@@ -7,4 +7,8 @@ abstract class DetailEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadDataCategoriasEvent extends DetailEvent {}
+class LoadBreedDetailEvent extends DetailEvent {
+  final String idBreeds;
+
+  const LoadBreedDetailEvent({required this.idBreeds});
+}

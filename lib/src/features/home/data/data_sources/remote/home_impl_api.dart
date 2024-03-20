@@ -1,6 +1,6 @@
 import 'package:network_breeds/app/network/http_client.dart';
 import 'package:breeds/src/features/home/data/data_sources/remote/abstract_home_api.dart';
-import 'package:breeds/src/features/home/domain/models/breed.dart';
+import 'package:models_breeds/app/models/breed.dart';
 
 class HomeImplApi extends AbstractHomeApi {
   HomeImplApi({

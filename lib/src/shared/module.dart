@@ -20,7 +20,7 @@ class GlobalModule extends Module {
       ChildRoute(
         '/detail',
         child: (_, args) => detail.Page(
-          product: (args.data ?? {})['id'] ?? {},
+          detailParams: (args.data ?? {})['params'] ?? {},
         ),
         transition: TransitionType.fadeIn,
       ),

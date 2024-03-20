@@ -1,4 +1,5 @@
 import 'package:breeds_widget/app/widget/imagen_widget.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart'
@@ -8,6 +9,7 @@ import 'package:gap/gap.dart';
 
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:l10n_breeds/app/breeds_ui.dart';
+import 'package:models_breeds/app/models/breed.dart';
 import 'package:utils_breeds/utils/constant/colors.dart';
 import 'package:utils_breeds/utils/constant/spacing.dart';
 import 'package:utils_breeds/utils/helpers/text/text.dart';
@@ -15,26 +17,14 @@ import 'package:utils_breeds/utils/helpers/text/text.dart';
 class CardProductHorizontal extends StatelessWidget {
   const CardProductHorizontal({
     super.key,
-    required this.image,
-    required this.title,
-    required this.priceBefore,
-    required this.price,
-    required this.desct,
-    required this.isFreeSend,
     this.widthImage = 150,
     this.heightImage = 120,
-    required this.id,
+    required this.breed,
   });
-  final String image;
-  final String title;
-  final String priceBefore;
-  final String price;
-  final String desct;
-  final bool isFreeSend;
 
   final double widthImage;
   final double heightImage;
-  final int id;
+  final Breed breed;
 
   @override
   Widget build(BuildContext context) {
@@ -61,13 +51,14 @@ class CardProductHorizontal extends StatelessWidget {
               children: [
                 BlocBuilder<BlocFavorite, FavoriteState>(
                   builder: (context, state) {
-                    final isFavorite = state.model.favorites.contains(id);
+                    final isFavorite = state.model.favorites.contains(breed);
+
                     return InkWell(
                       key: UniqueKey(),
                       onTap: () {
                         context
                             .read<BlocFavorite>()
-                            .add(OnChangeFavoriteEvent(id: id));
+                            .add(OnChangeFavoriteEvent(id: breed));
                       },
                       child: SvgPicture.asset(
                         isFavorite
@@ -80,9 +71,11 @@ class CardProductHorizontal extends StatelessWidget {
                   },
                 ),
                 Hero(
-                  tag: image,
+                  tag: breed.referenceImageId ?? '',
                   child: ImagenWidget(
-                    image: image,
+                    image: BreedUiValues.imageUrlConcatec(
+                      breed.referenceImageId ?? '',
+                    ),
                     height: heightImage,
                     width: widthImage,
                   ),
@@ -93,25 +86,11 @@ class CardProductHorizontal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     XigoTextMedium(
-                      title,
+                      breed.name,
                       color: ProTiendasUiColors.primaryColor,
                       weight: FontWeight.w600,
                     ),
                     const Gap(ProTiendaSpacing.sm),
-                    XigoTextMedium(
-                      price,
-                      color: ProTiendasUiColors.primaryColor,
-                      weight: FontWeight.w500,
-                    ),
-                    const Gap(ProTiendaSpacing.sm),
-                    if (isFreeSend) ...[
-                      const Gap(ProTiendaSpacing.sm),
-                      XigoTextMedium(
-                        BreedUiValues.sendFree,
-                        color: ProTiendasUiColors.secondaryColor,
-                        weight: FontWeight.w500,
-                      ),
-                    ]
                   ],
                 ),
               ],

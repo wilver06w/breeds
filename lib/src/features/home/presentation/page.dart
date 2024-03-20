@@ -2,11 +2,13 @@ import 'package:breeds/src/features/home/domain/usecases/breedlist_usecase.dart'
 import 'package:breeds/src/features/home/presentation/bloc/bloc.dart';
 import 'package:breeds/src/shared/widget/card_product_vertical.dart';
 import 'package:breeds_widget/app/widget/app_bar_global.dart';
+import 'package:breeds_widget/app/widget/banner.dart';
 import 'package:breeds_widget/app/widget/body_footer.dart';
 import 'package:breeds_widget/app/widget/title_sections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:l10n_breeds/app/breeds_ui.dart';
 import 'package:network_breeds/app/network/http_client.dart'
     hide ModularWatchExtension;
@@ -20,6 +22,7 @@ import 'package:utils_breeds/utils/loading.dart';
 
 part 'package:breeds/src/features/home/presentation/_sections/body.dart';
 part 'package:breeds/src/features/home/presentation/_sections/card_image_grid.dart';
+part 'package:breeds/src/features/home/presentation/_sections/search_separated.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -38,8 +41,12 @@ class Page extends StatelessWidget {
           backgroundColor: Colors.white,
           bottomNavigationBar: BodyFooter(app: app),
           appBar: AppBarGlobal(
+            widgetSearch: Builder(builder: (context) {
+              return const SearchSeparated();
+            }),
             havIconLeft: false,
             onTapIcon: () {},
+            onChanged: (value) {},
           ),
           body: const SafeArea(
             child: Body(),
@@ -51,9 +58,9 @@ class Page extends StatelessWidget {
 }
 
 Future<void> _listener(BuildContext context, HomeState state) async {
-  if (state is LoadingBannerState || state is LoadingDataCategoriasState) {
+  if (state is LoadingListBreedState) {
     YuGiOhLoading.show(context);
-  } else if (state is ErrorBannerState) {
+  } else if (state is ErrorListBreedState) {
     Navigator.pop(context);
     showToast(
       state.message,
@@ -62,16 +69,7 @@ Future<void> _listener(BuildContext context, HomeState state) async {
         color: Colors.white,
       ),
     );
-  } else if (state is ErrorDataCategoriasState) {
-    Navigator.pop(context);
-    showToast(
-      state.message,
-      backgroundColor: ProTiendasUiColors.rybBlue,
-      textStyle: const TextStyle(
-        color: Colors.white,
-      ),
-    );
-  } else if (state is LoadedBannerState || state is LoadedDataCategoriasState) {
+  } else if (state is LoadedListBreedState) {
     Navigator.pop(context);
   }
 }
