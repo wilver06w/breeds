@@ -1,11 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:network_breeds/app/network/http_client.dart';
-import 'package:breeds/src/features/addresses/module.dart';
 import 'package:breeds/src/features/cart/module.dart';
 import 'package:breeds/src/features/home/module.dart';
-import 'package:breeds/src/features/detail/page.dart' as detail;
+import 'package:breeds/src/features/detail/presentation/page.dart' as detail;
 import 'package:breeds/src/features/splash/ui/page.dart' as splash;
-import 'package:breeds/src/features/payment_method/module.dart';
 
 class GlobalModule extends Module {
   @override
@@ -22,13 +20,11 @@ class GlobalModule extends Module {
       ChildRoute(
         '/detail',
         child: (_, args) => detail.Page(
-          product: (args.data ?? {})['product'] ?? {},
+          product: (args.data ?? {})['id'] ?? {},
         ),
         transition: TransitionType.fadeIn,
       ),
       ModuleRoute('/home', module: HomeModule()),
-      ModuleRoute('/address', module: AddressesModule()),
-      ModuleRoute('/payment', module: PaymentMethodModule()),
       ModuleRoute('/cart', module: CartModule()),
     ];
   }

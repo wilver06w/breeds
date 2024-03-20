@@ -82,23 +82,23 @@ class ErrorDeleteByArchetypeState extends HomeState {
 
 class Model extends Equatable {
   const Model({
+    this.listBreed = const [],
     this.dataCategoria,
-    this.dataBanner,
     this.banList,
   });
 
+  final List<Breed> listBreed;
   final DataCategoria? dataCategoria;
-  final DataBanner? dataBanner;
   final List<int>? banList;
 
   Model copyWith({
+    List<Breed>? listBreed,
     DataCategoria? dataCategoria,
-    DataBanner? dataBanner,
     List<int>? banList,
   }) {
     return Model(
+      listBreed: listBreed ?? this.listBreed,
       dataCategoria: dataCategoria ?? this.dataCategoria,
-      dataBanner: dataBanner ?? this.dataBanner,
       banList: banList ?? this.banList,
     );
   }
@@ -106,8 +106,8 @@ class Model extends Equatable {
   @override
   List<Object?> get props {
     return [
+      listBreed,
       dataCategoria,
-      dataBanner,
       banList,
     ];
   }

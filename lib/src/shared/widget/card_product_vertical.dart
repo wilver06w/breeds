@@ -1,3 +1,4 @@
+import 'package:breeds_widget/app/widget/start_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart'
@@ -15,19 +16,15 @@ class CardProductVertical extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    required this.priceBefore,
-    required this.price,
-    required this.desct,
-    required this.isFreeSend,
+    required this.adaptability,
+    required this.socialNeeds,
     required this.id,
   });
 
   final String image;
   final String title;
-  final String priceBefore;
-  final String price;
-  final String desct;
-  final bool isFreeSend;
+  final int adaptability;
+  final int socialNeeds;
   final int id;
 
   @override
@@ -47,7 +44,7 @@ class CardProductVertical extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(ProTiendaSpacing.sl),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -71,46 +68,32 @@ class CardProductVertical extends StatelessWidget {
                   );
                 },
               ),
-              Hero(
-                tag: image,
-                child: Image.network(
-                  image,
-                  height: 120,
-                  width: 150,
+              Center(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: NetworkImage(
+                    image,
+                  ),
                 ),
               ),
               const Gap(ProTiendaSpacing.sl),
-              XigoTextMedium(
+              XigoTextLarge(
                 title,
                 color: ProTiendasUiColors.primaryColor,
                 weight: FontWeight.w600,
               ),
               const Gap(ProTiendaSpacing.sm),
               XigoTextSmall(
-                priceBefore,
+                BreedUiValues.adaptability,
                 color: ProTiendasUiColors.silverFoil,
               ),
+              StartItem(qualification: adaptability),
               const Gap(ProTiendaSpacing.sm),
-              Row(
-                children: [
-                  XigoTextXl(
-                    price,
-                    color: ProTiendasUiColors.primaryColor,
-                  ),
-                  const Gap(ProTiendaSpacing.sm),
-                  XigoTextXl(
-                    desct,
-                    color: ProTiendasUiColors.secondaryColor,
-                  ),
-                ],
+              XigoTextSmall(
+                BreedUiValues.socialNeeds,
+                color: ProTiendasUiColors.silverFoil,
               ),
-              if (isFreeSend) ...[
-                const Gap(ProTiendaSpacing.sm),
-                XigoTextSmall(
-                  BreedUiValues.sendFree,
-                  color: ProTiendasUiColors.secondaryColor,
-                ),
-              ]
+              StartItem(qualification: socialNeeds),
             ],
           ),
         ),

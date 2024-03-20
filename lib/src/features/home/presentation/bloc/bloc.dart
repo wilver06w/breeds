@@ -2,9 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:breeds/src/features/home/domain/models/breed.dart';
-import 'package:breeds/src/features/home/domain/usecases/banlist_usecase.dart';
-import 'package:breeds/src/features/home/domain/usecases/banner_usecase.dart';
-import 'package:breeds/src/features/home/domain/usecases/categorias_usecase.dart';
+import 'package:breeds/src/features/home/domain/usecases/breedlist_usecase.dart';
 import 'package:models_breeds/app/models/data_categoria.dart';
 
 part 'event.dart';
@@ -12,26 +10,21 @@ part 'state.dart';
 
 class BlocHome extends Bloc<HomeEvent, HomeState> {
   BlocHome({
-    required this.listBanUseCase,
-    required this.bannerUseCase,
-    required this.categoriesUseCase,
+    required this.listBreedUseCase,
   }) : super(const InitialState(Model())) {
-    on<LoadBannerEvent>(_onLoadBannerEvent);
-    on<LoadDataCategoriasEvent>(_onLoadDataCategoriasEvent);
+    on<LoadListBreedEvent>(_onLoadListBreedEvent);
   }
-  final ListBanUseCase listBanUseCase;
-  final BannerUseCase bannerUseCase;
-  final CategoriesUseCase categoriesUseCase;
+  final ListBreedUseCase listBreedUseCase;
 
-  Future<void> _onLoadBannerEvent(
-    LoadBannerEvent event,
+  Future<void> _onLoadListBreedEvent(
+    LoadListBreedEvent event,
     Emitter<HomeState> emit,
   ) async {
     emit(LoadingBannerState(state.model));
 
-    final dataBanner = await bannerUseCase.call();
+    final listBreeds = await listBreedUseCase.call();
 
-    dataBanner.fold((l) {
+    listBreeds.fold((l) {
       emit(
         ErrorBannerState(
           model: state.model,
@@ -42,33 +35,7 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
       emit(
         LoadedBannerState(
           state.model.copyWith(
-            dataBanner: r,
-          ),
-        ),
-      );
-    });
-  }
-
-  Future<void> _onLoadDataCategoriasEvent(
-    LoadDataCategoriasEvent event,
-    Emitter<HomeState> emit,
-  ) async {
-    emit(LoadingDataCategoriasState(state.model));
-
-    final dataCategoria = await categoriesUseCase.call();
-
-    dataCategoria.fold((l) {
-      emit(
-        ErrorDataCategoriasState(
-          model: state.model,
-          message: l.toString(),
-        ),
-      );
-    }, (r) {
-      emit(
-        LoadedDataCategoriasState(
-          state.model.copyWith(
-            dataCategoria: r,
+            listBreed: r,
           ),
         ),
       );

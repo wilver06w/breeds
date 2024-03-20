@@ -1,6 +1,6 @@
+import 'package:breeds/src/features/detail/domain/models/breed_detail.dart';
+import 'package:breeds/src/features/detail/data/data_sources/remote/abstract_home_api.dart';
 import 'package:network_breeds/app/network/http_client.dart';
-import 'package:breeds/src/features/home/data/data_sources/remote/abstract_home_api.dart';
-import 'package:breeds/src/features/home/domain/models/breed.dart';
 
 class HomeImplApi extends AbstractHomeApi {
   HomeImplApi({
@@ -14,12 +14,12 @@ class HomeImplApi extends AbstractHomeApi {
   ///
   ///Va al endpoint y trae la lista de razas.
   @override
-  Future<List<Breed>> getBreeds() async {
+  Future<List<BreedDetail>> getBreeds() async {
     final response = await xigoHttpClient.msDio.get(urlBreeds);
 
     List<dynamic> list = response.data;
 
-    final rawListData = list.map((e) => Breed.fromJson(e)).toList();
+    final rawListData = list.map((e) => BreedDetail.fromJson(e)).toList();
     return rawListData;
   }
 }
