@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:network_breeds/app/network/http_client.dart';
 import 'package:breeds/src/features/home/data/data_sources/remote/abstract_home_api.dart';
 import 'package:models_breeds/app/models/breed.dart';
+import 'package:network_breeds/app/network/exceptions.dart';
+import 'package:network_breeds/app/network/failures.dart';
 
 class HomeImplApi extends AbstractHomeApi {
   HomeImplApi({
@@ -15,11 +18,17 @@ class HomeImplApi extends AbstractHomeApi {
   ///Va al endpoint y trae la lista de razas.
   @override
   Future<List<Breed>> getBreeds() async {
-    final response = await xigoHttpClient.msDio.get(urlBreeds);
+    try {
+      final response = await xigoHttpClient.msDio.get(urlBreeds);
 
-    List<dynamic> list = response.data;
+      List<dynamic> list = response.data;
 
-    final rawListData = list.map((e) => Breed.fromJson(e)).toList();
-    return rawListData;
+      final rawListData = list.map((e) => Breed.fromJson(e)).toList();
+      return rawListData;
+    } on ServerException catch (e) {
+      throw ServerException(e.message, e.statusCode);
+    } catch (e) {
+      throw ServerException(e.toString(), 500);
+    }
   }
 }
