@@ -6,7 +6,7 @@ El proyecto está organizado de la siguiente manera:
 
    ![Captura de pantalla 2024-03-20 174708](https://github.com/wilver06w/breeds/assets/39421707/966e982e-133e-4544-9c65-468d7b059f25)
 
-      * BreedsWidget: Aqui Organice los widget compartidos, y ahi mismo hize widgetTest para hacer pruebas unitarias, Utilice el widget de la libreria lotti para las animaciones.
+      * BreedsWidget: Aqui Organice los widget compartidos, y ahi mismo hize widgetTest, Utilice el widget de la libreria lotti para las animaciones.
 
         ![Captura de pantalla 2024-03-20 174835](https://github.com/wilver06w/breeds/assets/39421707/9521a543-82eb-444b-9efb-71dc4ef0a046)
         
@@ -40,7 +40,7 @@ El proyecto está organizado de la siguiente manera:
         * Shared: Va los widget compartidos, y los blocs compartidos.
 
     * Es una aplicación modularizada en Feature tengo - splash, home, favorite y detail -
-        * Home: representé de diferentes maneras la lista de elementos que crei posible implemente un banner, dos listas horizontales una circular y la otra cuadriculada y un GridView.
+        * Home: representé de diferentes maneras la lista de elementos que crei posible implemente un banner, dos listas horizontales una circular y la otra cuadriculada y un GridView. Tiene Un listener, que si te quedas sin internet, te aparece una etiqueta en la parte superior.
 
         * Puedes deslizarte, puedes seleccionar algun card para ver el detalle de cada raza y los detalles especificos: por ejemplo la adaptabilidad y aseo, Tienes opcion de compartir con tus amigos, puedes guardar a favoritos cualquier ítem que es que te parezca relevante para encontrarlo más adelante más fácilmente.
 
@@ -66,3 +66,6 @@ Igual las desgloso:
 
 Visual:
 ![Screenshot_1710975595](https://github.com/wilver06w/breeds/assets/39421707/ad3ceadb-280a-4752-bbc3-645e472b60e8)
+
+
+PDTA: Gracias por permitirme mostrarles como trabajo y por el tiempo invertido en revisarlo.
