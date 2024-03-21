@@ -35,6 +35,7 @@ dependencies:
   dartz: ^0.10.1
   package_info_plus: ^5.0.1
   patrol: ^3.6.0
+  flutter_launcher_icons: ^0.13.1
   l10n_breeds:
     git:
       url: https://github.com/wilver06w/l10n_breeds.git
@@ -71,10 +72,13 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+
+flutter_launcher_icons:
+    android: 'launcher_icon'
+    image_path: 'assets/image/icon.jpg'
+    ios: true
+    min_sdk_android: 21
 flutter:
-
-
-
   uses-material-design: true
   assets:
   - config/

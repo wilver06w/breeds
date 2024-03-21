@@ -23,9 +23,7 @@ class ErrorState extends StateSplash {
 
 class Model extends Equatable {
   const Model();
-  Model copyWith({
-    required key,
-  }) {
+  Model copyWith() {
     return const Model();
   }
 

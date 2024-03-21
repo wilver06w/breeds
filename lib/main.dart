@@ -1,5 +1,6 @@
 import 'package:breeds/src/core/app.dart';
 import 'package:breeds/src/core/module.dart';
+import 'package:breeds_widget/app/widget/internet_conection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -65,11 +66,13 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           supportedLocales: S.delegate.supportedLocales,
           localeResolutionCallback: localeCallBack,
           builder: (context, child) {
-            return MediaQuery(
-              data: MediaQuery.of(context).copyWith(
-                textScaler: const TextScaler.linear(1.0),
+            return InternetConnectionWidget(
+              child: MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
               ),
-              child: child ?? const SizedBox.shrink(),
             );
           },
         ),

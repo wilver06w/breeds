@@ -6,11 +6,13 @@ import 'package:breeds/src/features/home/inject.dart';
 import 'package:breeds/src/shared/module.dart';
 import 'package:breeds/src/shared/widget/favorite/bloc/bloc.dart';
 import 'package:utils_breeds/utils/config/client_config.dart';
+import 'package:utils_breeds/utils/config/main/bloc/bloc.dart' as app;
 
 class AppModule extends Module {
   @override
   List<Bind> get binds {
     return [
+      Bind.lazySingleton((i) => app.Bloc()),
       Bind<XigoHttpClient>(
         (i) => XigoHttpClient().getInstance(i<AppConfig>()),
       ),
