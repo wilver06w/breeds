@@ -19,6 +19,7 @@ import 'package:utils_breeds/utils/constant/spacing.dart';
 import 'package:utils_breeds/utils/functions.dart';
 import 'package:utils_breeds/utils/helpers/text/xigo_text.dart';
 import 'package:utils_breeds/utils/loading.dart';
+import 'package:utils_breeds/utils/extension_gap.dart';
 
 part 'package:breeds/src/features/detail/presentation/_sections/body.dart';
 

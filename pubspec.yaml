@@ -36,36 +36,36 @@ dependencies:
   package_info_plus: ^5.0.1
   patrol: ^3.6.0
   flutter_launcher_icons: ^0.13.1
-  l10n_breeds:
-    git:
-      url: https://github.com/wilver06w/l10n_breeds.git
-      ref: main
-  breeds_widget:
-    git:
-      url: https://github.com/wilver06w/breeds_widget.git
-      ref: main
-  utils_breeds:
-    git:
-      url: https://github.com/wilver06w/utils_breeds.git
-      ref: main
-  models_breeds:
-    git:
-      url: https://github.com/wilver06w/models_breeds.git
-      ref: main
-  network_breeds:
-    git:
-      url: https://github.com/wilver06w/network_breeds.git
-      ref: main
   # l10n_breeds:
-  #   path: ../l10n_breeds
+  #   git:
+  #     url: https://github.com/wilver06w/l10n_breeds.git
+  #     ref: main
   # breeds_widget:
-  #   path: ../breeds_widget
+  #   git:
+  #     url: https://github.com/wilver06w/breeds_widget.git
+  #     ref: main
   # utils_breeds:
-  #   path: ../utils_breeds
+  #   git:
+  #     url: https://github.com/wilver06w/utils_breeds.git
+  #     ref: main
   # models_breeds:
-  #   path: ../models_breeds
+  #   git:
+  #     url: https://github.com/wilver06w/models_breeds.git
+  #     ref: main
   # network_breeds:
-  #   path: ../network_breeds
+  #   git:
+  #     url: https://github.com/wilver06w/network_breeds.git
+  #     ref: main
+  l10n_breeds:
+    path: ../l10n_breeds
+  breeds_widget:
+    path: ../breeds_widget
+  utils_breeds:
+    path: ../utils_breeds
+  models_breeds:
+    path: ../models_breeds
+  network_breeds:
+    path: ../network_breeds
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -55,7 +55,7 @@ class Body extends StatelessWidget {
                       title: BreedUiValues.imperial,
                       description: '${data?.weight.imperial}',
                     ),
-                    const Gap(BreedSpacing.xs),
+                    16.g,
                     ItemDescription(
                       title: BreedUiValues.metric,
                       description: '${data?.weight.metric}',
