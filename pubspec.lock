@@ -76,9 +76,11 @@ packages:
   breeds_widget:
     dependency: "direct main"
     description:
-      path: "../breeds_widget"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: "551bd4ce25c67d8faa1e51e42c84ded141a76f8f"
+      url: "https://github.com/wilver06w/breeds_widget.git"
+    source: git
     version: "0.0.1"
   carousel_slider:
     dependency: "direct main"
@@ -518,9 +520,11 @@ packages:
   l10n_breeds:
     dependency: "direct main"
     description:
-      path: "../l10n_breeds"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: "8a896509b978c3c1f186b6a46f0172299dfe5569"
+      url: "https://github.com/wilver06w/l10n_breeds.git"
+    source: git
     version: "0.0.1"
   leak_tracker:
     dependency: transitive
@@ -613,9 +617,11 @@ packages:
   models_breeds:
     dependency: "direct main"
     description:
-      path: "../models_breeds"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: "36a5f3422e99835f885cc4abb20fe1d02c636912"
+      url: "https://github.com/wilver06w/models_breeds.git"
+    source: git
     version: "0.0.1"
   modular_core:
     dependency: transitive
@@ -644,9 +650,11 @@ packages:
   network_breeds:
     dependency: "direct main"
     description:
-      path: "../network_breeds"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: ec0f64d1f5ff4d86986495186051534a0059a053
+      url: "https://github.com/wilver06w/network_breeds.git"
+    source: git
     version: "0.0.1"
   nm:
     dependency: transitive
@@ -1128,9 +1136,11 @@ packages:
   utils_breeds:
     dependency: "direct main"
     description:
-      path: "../utils_breeds"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: "0a65ff97b32ab40557f281668b15ca4d7c014457"
+      url: "https://github.com/wilver06w/utils_breeds.git"
+    source: git
     version: "0.0.1"
   uuid:
     dependency: transitive
