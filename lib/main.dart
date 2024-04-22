@@ -49,6 +49,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       onTap: BreedKeyboard.close,
       child: OKToast(
         child: MaterialApp.router(
+
           title: 'CatBreeds!',
           theme: ThemeData(
             textTheme: GoogleFonts.poppinsTextTheme(
