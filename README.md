@@ -19,7 +19,7 @@ El proyecto está organizado de la siguiente manera:
             
           ![Captura de pantalla 2024-03-20 175037](https://github.com/wilver06w/breeds/assets/39421707/533008d1-eb8c-4684-9f20-1e8fc75f0173)
       
-      * l10n: Aqui van las traducciones, de momento solo esta para CO, entonces solo sale el archivo de CO, pero si quiero agregar otro idioma solo tengo que agregar el archivo de traducciones y el archivo de strings, con la misma key, y ya de esa manera la aplicacion tendria multi idioma.
+      * l10n: Aqui van las traducciones, de momento solo esta para CO, entonces solo sale el archivo de ES, pero si quiero agregar otro idioma solo tengo que agregar el archivo de traducciones y el archivo de strings, con la misma key, y ya de esa manera la aplicacion tendria multi idioma.
             - y contiene un BreedUiValues:
                 Que recoge todas los llamados a estas key, y tambien a variables que se utilizan en la aplicación, por ejemplo la ruta de los assets.
    
